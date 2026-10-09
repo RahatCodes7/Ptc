@@ -1,0 +1,345 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-10-09T13:04:44.244Z"/><script data-language-priority="">(()=>{try{const p={"ar":"/assets/ar-fCk6ZPN1.js","da":"/assets/da-DqQyCbh2.js","de":"/assets/de-ypIO7l4l.js","es":"/assets/es-CEy-tgGx.js","fi":"/assets/fi-_Lb0IH55.js","fr":"/assets/fr-BfbXL6Xd.js","it":"/assets/it-Dx6PkEtX.js","ja":"/assets/ja-BIq72SrK.js","ko":"/assets/ko-gzbKydjF.js","nl":"/assets/nl-KtGl3kc5.js","no":"/assets/no-CDktD-xb.js","pt":"/assets/pt-BAcUTgMh.js","ru":"/assets/ru-ONBru-fC.js","th":"/assets/th-D0xvfCFK.js","tr":"/assets/tr-CnsrBEqb.js","vi":"/assets/vi-BLCuFMyJ.js","zh":"/assets/zh-eHjYyx3a.js","en":"/assets/i18n-rE1JQKOk.js"},n=v=>({nb:'no',nn:'no'}[String(v||'').toLowerCase().split(/[-_]/)[0]]||String(v||'').toLowerCase().split(/[-_]/)[0]),d=(navigator.languages||[navigator.language]).map(n).find(x=>p[x])||'en',s=n(localStorage.getItem('fundera_lang')||localStorage.getItem('i18nextLng'));for(const code of [p[s]?s:d]){if(code==='en'||!p[code])continue;const l=document.createElement('link');l.rel='modulepreload';l.crossOrigin='anonymous';l.href=p[code];document.head.append(l)}}catch{}})();</script><style data-layout-critical="">/* Initial header geometry, available before external styles and scripts load. */
+html{background:#000;color:#fff;scrollbar-gutter:stable;-webkit-text-size-adjust:100%;text-size-adjust:100%;}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","Segoe UI",system-ui,sans-serif;}
+*,*::before,*::after{box-sizing:border-box;}a{color:inherit;text-decoration:none;}button{font:inherit;}
+.livebar,.livebar[hidden]{display:flex!important;height:43px;align-items:center;gap:16px;padding:0 32px;overflow:hidden;}
+.livebar[hidden]{visibility:hidden;}
+.nav:where(:not([aria-label="Dashboard sections"])){display:flex;align-items:center;justify-content:space-between;height:91px;padding:0 32px;position:sticky;top:0;z-index:60;}
+.nav .brand{display:flex;align-items:center;gap:9px;}.nav .mark{width:25px;height:28px;}.nav .word{font-size:20px;font-weight:700;}
+.navlinks,.navright{display:flex;align-items:center;gap:10px;}.navlinks{padding:6px 8px;}.navlinks a{padding:8px 16px;white-space:nowrap;font-size:15px;}
+.navright .pill{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border:1px solid rgba(255,255,255,.1);border-radius:64px;font-size:15px;}
+.navright svg{width:15px;height:15px;}.navright .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:8px 14px;min-width:132px;font-size:14px;border-radius:64px;}
+.langmenu,.mob-menu,.nav .mob-toggle{display:none;}.nav .brand svg{display:block;}
+.docs-skip{position:fixed;top:-80px;left:20px;}.docs-reading-progress{position:fixed;top:0;left:0;height:2px;}
+@media(min-width:901px) and (max-width:1200px){.navlinks{display:none;}.nav .mob-toggle{display:inline-flex;}}
+@media(max-width:900px){.livebar,.livebar[hidden]{padding:0 16px;}.nav{height:64px;padding:14px 12px;gap:6px;}.nav .brand{gap:6px;}.nav .word{font-size:17px;}.navlinks,.nav .lang,.navright>.pill:first-child{display:none;}.navright{gap:6px;}.navright .pill{padding:7px 12px;font-size:13px;gap:4px;}.navright .btn{padding:6px 12px;font-size:12px;gap:4px;min-width:112px;}.nav .mob-toggle{display:inline-flex;}.mob-toggle svg{width:20px;height:20px;}}
+@media(max-width:380px){.nav .word{display:none;}}
+</style><script>// Analytics queues still initialize immediately; only external downloads wait
+// until the first screen has had an opportunity to paint.
+window.funderaAfterContent=task=>{
+  const run=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    if('requestIdleCallback' in window)requestIdleCallback(task,{timeout:1000});
+    else setTimeout(task,0);
+  }));
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run();
+};
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('script[data-delayed-src]').forEach(node=>window.funderaAfterContent(()=>{
+    const script=document.createElement('script');script.async=true;script.src=node.dataset.delayedSrc;
+    document.head.appendChild(script);node.remove();
+  }));
+},{once:true});
+</script><link rel="preload" href="../assets/pxiByp8kv8JHgFVrLCz7Z1xlFd2JQEk-g9MkRaG0.woff2" as="font" type="font/woff2"><link rel="preload" href="../assets/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw-8kRkwJBP.woff2" as="font" type="font/woff2"><style data-header-geometry="">/* Available in the initial HTML on every route; no downloaded font swap. */
+:root{--fundera-ui-font:-apple-system,BlinkMacSystemFont,"SF Pro Display",system-ui,"Segoe UI",sans-serif;}
+.nav .navright,.dashboard-shell .topbar{font-family:var(--fundera-ui-font);}
+.nav .navright .pill,.dashboard-shell .top-control{border:1px solid rgba(255,255,255,.1);border-radius:64px;}
+.dashboard-shell .lang-trigger>svg{display:block;width:15px;height:15px;flex-shrink:0;}
+.nav .brand .word,.dashboard-shell .dashboard-header-brand .word{font-family:var(--fundera-ui-font);font-size:20px;font-weight:700;letter-spacing:-.02em;line-height:1.4;}
+.nav .navright>.btn,.dashboard-shell>.topbar .wallet.wallet-connected,.dashboard-shell>.topbar .btn-pink.header-connect{font-family:var(--fundera-ui-font);font-size:14px;font-weight:500;line-height:17px;min-width:132px;height:33px;padding:8px 14px;gap:8px;border:0;border-radius:64px;background:#FD00F4;color:#fff;box-shadow:0 8px 30px rgba(242,56,180,.3);white-space:nowrap;box-sizing:border-box;}
+@media(max-width:900px){
+ .dashboard-shell .lang-trigger{width:auto;min-width:52px;gap:6px;padding-inline:8px;}
+ .nav .brand .word,.dashboard-shell .dashboard-header-brand .word{font-size:17px!important;}
+ .nav .navright>.btn,.dashboard-shell>.topbar .wallet.wallet-connected,.dashboard-shell>.topbar .btn-pink.header-connect{font-size:12px;line-height:15px;min-width:112px;height:27px;padding:6px 12px;gap:4px;}
+}
+</style><script data-wallet-label-boot="">// Restore only the header label before the wallet SDK or page entry executes.
+(()=>{
+  window.funderaRestoreWalletLabel=root=>{
+    const button=root.querySelector('.navright > .btn');
+    if(!button)return false;
+    try{
+      const saved=JSON.parse(sessionStorage.getItem('fundera_wallet_display')||'null');
+      const namespace=sessionStorage.getItem('fundera_wallet_namespace')||'eip155';
+      const state=window.wallet?.getState?.();
+      const address=state?.address||state?.displayAddress||saved?.[namespace]||saved?.eip155||saved?.solana||saved?.tron;
+      if(typeof address==='string'&&address.length>=10&&address.length<=64){
+        if(!button.hasAttribute('data-wallet-initial-html')&&(button.querySelector('[data-i18n="nav.connect"]')||button.textContent.trim()==='Connect'))button.dataset.walletInitialHtml=button.innerHTML;
+        const label=document.createElement('span');label.textContent=address.slice(0,6)+'\u2026'+address.slice(-4);
+        button.replaceChildren(label);
+      }
+    }catch{}
+    return true;
+  };
+})();
+</script>
+  <style>html.i18n-boot body{visibility:hidden}</style>
+  <script>
+    (()=>{try{const a=["en","vi","nl","tr","it","zh","fr","es","da","de","ja","ko","ar","no","ru","pt","fi","th"],n=v=>({nb:"no",nn:"no"}[String(v||"").toLowerCase().split(/[-_]/)[0]]||String(v||"").toLowerCase().split(/[-_]/)[0]),s=localStorage.getItem("fundera_lang")||localStorage.getItem("i18nextLng"),d=s?[s]:(navigator.languages?.length?navigator.languages:[navigator.language]),l=d.map(n).find(x=>a.includes(x))||"en";if(l!=="en"){document.documentElement.lang=l;document.documentElement.dir=l==="ar"?"rtl":"ltr";document.documentElement.classList.add("i18n-boot");setTimeout(()=>document.documentElement.classList.remove("i18n-boot"),1500)}}catch(e){}})();
+  </script>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;window.funderaAfterContent(()=>f.parentNode.insertBefore(j,f));
+        })(window,document,'script','dataLayer','GTM-PVT5FP95');
+  </script>
+  <!-- End Google Tag Manager -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Buy $PTC | Penta Core</title>
+<style>
+  /* critical: dark canvas + sane icon size before the main stylesheet applies
+     (prevents the white flash + giant unstyled-icon flash on slow loads) */
+  html{background:#070707}
+  body{margin:0}
+  svg{width:1.1em;height:1.1em}
+  /* hide the live price box until real values load (no stale "Total Raised" flash) */
+  .bc-pricebox{opacity:0}
+  .bc-pricebox.eco-ready{opacity:1;transition:opacity .3s ease}
+</style>
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" fill="#070707"></rect>
+    <circle cx="74" cy="26" r="24" fill="#FD00F4" opacity="0.5"></circle>
+    <path d="M44.3 18.2c1.3-.7 2.9-.7 4.2 0l14.5 8.3c1.3.8 2.1 2.2 2.1 3.7v16.7c0 1.5-.8 2.9-2.1 3.7l-14.5 8.3c-1.3.8-2.9.8-4.2 0L29.8 50.6c-1.3-.8-2.1-2.2-2.1-3.7V30.2c0-1.5.8-2.9 2.1-3.7l14.5-8.3Z" fill="none" stroke="#fff" stroke-width="2.4"></path>
+    <text x="50" y="84" font-family="Poppins,sans-serif" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">penta core.</text>
+  </svg>
+</template>
+<!-- Google tag (gtag.js) -->
+<script type="text/plain" data-delayed-src="https://www.googletagmanager.com/gtag/js?id=G-MT93Q20NKJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MT93Q20NKJ');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+window.funderaAfterContent(()=>s.parentNode.insertBefore(t,s))}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1526616058379034');
+fbq('track', 'PageView');
+</script>
+
+<!-- End Meta Pixel Code -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,window.funderaAfterContent(()=>a.parentNode.insertBefore(k,a))})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(104118768, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+   ym(98903561, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<!-- /Yandex.Metrika counter -->
+  
+  
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+window.funderaAfterContent(()=>s.parentNode.insertBefore(t,s))}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1667926830743603');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,window.funderaAfterContent(()=>a.parentNode.insertBefore(k,a))})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(104118768, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+   ym(98903561, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<!-- /Yandex.Metrika counter -->
+  <script type="module" src="../assets/i18n-rE1JQKOk.js"></script>
+  <script type="module" src="../assets/transaction-ticker-b2c1b993.js"></script>
+  <script type="module" src="../assets/header-controls-f07d1d71.js"></script>
+  <script type="module" src="../assets/ui-U1rpOh0k.js"></script>
+  <script type="module" src="../assets/page-55ccf1e0.js"></script>
+  <link rel="stylesheet" href="../assets/header-controls-DDz9dF5C.css">
+  <link rel="stylesheet" href="../assets/transaction-ticker-Duhs3A--.css">
+  <link rel="stylesheet" href="../assets/site-fonts-BHEWlrE4.css" data-fundera-fonts="">
+</head>
+<body>
+<noscript><img height="1" width="1" style="display:none" src="../../_external/www.facebook.com/tr.id_1667926830743603_ev_PageView_noscript_1.plain"></noscript>
+<noscript><div><img src="../../_external/mc.yandex.ru/watch/104118768.gif" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+<noscript><div><img src="../../_external/mc.yandex.ru/watch/98903561.gif" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+<div class="page-scale" id="pageScale">
+<div class="lp" id="lp">
+
+<!-- ============ AMBIENT GLOW TEXTURES (alive background) ============ -->
+<div class="lp-fx" aria-hidden="true">
+  <span class="gfx t1" style="--t:1%;--x:-4%;--s:600px;--o:.62;--rot:-6deg;--dx:26px;--dy:34px;--d:19s"></span>
+  <span class="gfx t3" style="--t:4%;--r:-6%;--s:560px;--o:.5;--rot:10deg;--dx:-30px;--dy:24px;--d:22s"></span>
+  <span class="gfx t6" style="--t:13%;--x:-3%;--s:480px;--o:.42;--rot:0deg;--dx:30px;--dy:-20px;--d:17s"></span>
+  <span class="gfx t9" style="--t:21%;--r:-4%;--s:520px;--o:.5;--rot:-12deg;--dx:-22px;--dy:30px;--d:24s"></span>
+  <span class="gfx t4" style="--t:31%;--x:-5%;--s:560px;--o:.46;--rot:8deg;--dx:28px;--dy:26px;--d:20s"></span>
+  <span class="gfx t5" style="--t:40%;--r:-5%;--s:600px;--o:.5;--rot:-4deg;--dx:-26px;--dy:-24px;--d:23s"></span>
+  <span class="gfx t7" style="--t:50%;--x:18%;--s:640px;--o:.5;--rot:0deg;--dx:20px;--dy:30px;--d:21s"></span>
+  <span class="gfx t2" style="--t:60%;--r:-4%;--s:520px;--o:.46;--rot:14deg;--dx:-28px;--dy:22px;--d:18s"></span>
+  <span class="gfx t8" style="--t:69%;--x:-4%;--s:540px;--o:.44;--rot:-8deg;--dx:24px;--dy:-26px;--d:25s"></span>
+  <span class="gfx t3" style="--t:78%;--r:-5%;--s:560px;--o:.48;--rot:6deg;--dx:-24px;--dy:28px;--d:20s"></span>
+  <span class="gfx t6" style="--t:87%;--x:-3%;--s:500px;--o:.44;--rot:-10deg;--dx:30px;--dy:24px;--d:22s"></span>
+  <span class="gfx t1" style="--t:95%;--r:-4%;--s:580px;--o:.52;--rot:8deg;--dx:-26px;--dy:-22px;--d:19s"></span>
+</div>
+
+<!-- ============ LIVE BAR ============ -->
+<div class="livebar">
+  <span class="pulse"></span><span class="live">LIVE</span><span class="sep">|</span>
+  <div class="ticker"><div class="track" id="ticker"></div></div>
+</div>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <a class="brand" href="../index.html">
+    <img class="mark" src="../land/penta-core-logo.png" alt="Penta Core" style="width:32px;height:32px;object-fit:cover;border-radius:50%;display:block;">
+    <span class="word">Penta Core.</span>
+  </a>
+  <div class="navlinks">
+    <a href="../index.html" data-i18n="nav.main">Main</a><a href="../index.html" data-i18n="nav.tokenomics">Tokenomics</a><a href="../index.html" data-i18n="nav.howToBuy">How to buy</a><a href="../index.html" data-i18n="nav.roadmap">Roadmap</a><a href="../docs/pentacore-whitepaper_pdf.html" target="_blank" rel="noopener" data-flink="whitepaper">Whitepaper</a><a href="../docs/index.html" data-i18n="nav.docs" data-flink="docs">Docs</a>
+  </div>
+  <div class="navright">
+    <button class="pill" id="socialBtn"><span data-i18n="nav.social">Social</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></button>
+    <div class="lang" id="langDd">
+      <button class="pill langbtn"><span class="flag flag-en"></span>EN <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></button>
+      <div class="langmenu">
+        <a><span class="flag flag-en"></span>EN</a>
+        <a><span class="flag flag-kz"></span>KZ</a>
+        <a><span class="flag flag-uk"></span>UK</a>
+      </div>
+    </div>
+    <a class="pill" href="../app/index.html" data-app-link=""><span data-i18n="nav.app">App</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10M7 17 17 7"></path></svg></a>
+    <button class="btn"><span data-i18n="nav.connect">Connect</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 7V5a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4M21 12v6a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V6"></path><path d="M18 13h.01"></path></svg></button>
+    <script>window.funderaRestoreWalletLabel?.(document);</script>
+    <button class="pill mob-toggle" id="mobToggle" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+  </div>
+</nav>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mob-menu" id="mobMenu">
+  <div class="mob-links">
+    <a href="../index.html" data-i18n="nav.main">Main<span class="dot"></span></a>
+    <a href="../index.html" data-i18n="nav.tokenomics">Tokenomics</a>
+    <a href="index.html" data-i18n="nav.howToBuy">How to buy</a>
+    <a href="../index.html" data-i18n="nav.roadmap">Roadmap</a>
+    <a href="../docs/pentacore-whitepaper_pdf.html" target="_blank" rel="noopener" data-flink="whitepaper">Whitepaper</a>
+    <a href="../docs/index.html" data-i18n="nav.docs" data-flink="docs">Docs</a>
+  </div>
+  <div class="mob-foot">
+    <div class="lang" id="mobLangDd2">
+      <button class="pill langbtn"><span class="flag flag-en"></span>EN <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></button>
+      <div class="langmenu">
+        <a><span class="flag flag-en"></span>EN</a>
+        <a><span class="flag flag-kz"></span>KZ</a>
+        <a><span class="flag flag-uk"></span>UK</a>
+      </div>
+    </div>
+    <div class="mob-community">
+      <div class="mob-com-label">Community</div>
+      <div class="foot-socials">
+        <a href="https://x.com/PentaCore_io" target="_blank" aria-label="X" data-social="x"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2.5h3.3l-7.2 8.2L23.6 22h-6.6l-5.2-6.8L5.9 22H2.6l7.7-8.8L2 2.5h6.8l4.7 6.2 5.4-6.2Zm-1.2 17.5h1.8L7.3 4.4H5.4L17.7 20Z"></path></svg></a>
+        <a href="https://t.me/pentacore_network" target="_blank" aria-label="Telegram" data-social="telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.6 20c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.3-.1-.5-.6-.2L6 13.5l-4.8-1.5c-1-.3-1-1 .2-1.5l18.7-7.2c.9-.3 1.6.2 1.3 1Z"></path></svg></a>
+        <a href="https://discord.gg/" target="_blank" aria-label="Discord" data-social="discord"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 5.3A16 16 0 0 0 15.5 4l-.3.5c1.4.3 2 .7 2.8 1.2A12 12 0 0 0 6 5.7c.7-.5 1.4-.9 2.8-1.2L8.5 4a16 16 0 0 0-4 1.3C2 9 1.4 12.6 1.7 16.2A16 16 0 0 0 6.5 18l.6-1c-.6-.2-1.2-.5-1.7-.9l.4-.3a11.4 11.4 0 0 0 9.8 0l.4.3c-.5.4-1.1.7-1.7.9l.6 1a16 16 0 0 0 4.8-1.8c.4-4.2-.6-7.8-3.2-10.9ZM8.3 14c-.8 0-1.4-.7-1.4-1.6 0-.9.6-1.6 1.4-1.6.8 0 1.4.7 1.4 1.6 0 .9-.6 1.6-1.4 1.6Zm7.4 0c-.8 0-1.4-.7-1.4-1.6 0-.9.6-1.6 1.4-1.6.8 0 1.4.7 1.4 1.6 0 .9-.6 1.6-1.4 1.6Z"></path></svg></a>
+        <a href="index.html" target="_blank" aria-label="Medium" data-social="medium"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 7.5c0-.3-.1-.5-.3-.7L1 5.1V5h5.2l4 8.8L13.8 5H19v.1l-1.5 1.4c-.1.1-.2.3-.2.4v9.6c0 .2.1.3.2.4l1.5 1.4V18h-7.3v-.1l1.5-1.5c.2-.1.2-.2.2-.4V8.3l-4.2 9.6h-.6L3.9 8.3v6.4c0 .3.1.5.3.7l2 2.4V18H1v-.1l2-2.4c.2-.2.3-.4.2-.7V7.5Z"></path></svg></a>
+        <a href="index.html" target="_blank" aria-label="CoinMarketCap" data-social="coinmarketcap"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3-10.5h-2V7h-2v2.5H9v2h2V14h2v-2.5h2v-2z"></path></svg></a>
+        <a href="index.html" target="_blank" aria-label="CoinGecko" data-social="coingecko"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.5 14H7v-2h9.5v2zm0-4H7v-2h9.5v2zm-3-4H7V6h6.5v2z"></path></svg></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============ HERO ============ -->
+<main class="page-wrap" style="position:relative; z-index:2; flex:1; min-height: 60vh; max-width: 800px; margin: 0 auto; padding: 120px 24px 80px;">
+  <h1 class="page-heading" style="font-size: clamp(24px, 5vw, 36px); font-weight: 700; line-height: 1.2; margin-bottom: 32px; background: linear-gradient(90deg, #fff 60%, #FD00F4); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Loading…</h1>
+  <div class="page-divider" style="height: 1px; background: rgba(255,255,255,0.07); margin-bottom: 32px;"></div>
+  <div id="page-content" style="color: rgba(245,245,247,0.6); font-size: 15px; line-height: 1.75;"></div>
+</main>
+<style>
+  #page-content h2 { color: #fff; font-size: 20px; font-weight: 600; margin: 32px 0 12px; }
+  #page-content h3 { color: #fff; font-size: 16px; font-weight: 600; margin: 24px 0 8px; }
+  #page-content p { margin-bottom: 16px; }
+  #page-content ul, #page-content ol { padding-left: 20px; margin-bottom: 16px; }
+  #page-content li { margin-bottom: 6px; }
+  #page-content a { color: #FD00F4; text-decoration: none; }
+  #page-content a:hover { text-decoration: underline; }
+  #page-content strong { color: #f5f5f7; font-weight: 600; }
+  #page-content hr { border: none; border-top: 1px solid rgba(255,255,255,0.07); margin: 28px 0; }
+  #page-content blockquote { border-left: 3px solid #FD00F4; padding: 12px 16px; background: rgba(253,0,244,0.05); border-radius: 0 8px 8px 0; margin-bottom: 16px; }
+</style>
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="foot-watermark">Penta Core<b>.</b></div>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="../index.html">
+          <img class="mark" src="../land/penta-core-logo.png" alt="Penta Core" style="width:32px;height:32px;object-fit:cover;border-radius:50%;display:block;">
+          <span class="word">Penta Core<b>.</b></span>
+        </a>
+        <p>$PTC is the core token of the Penta Core ecosystem.<br>It connects platform usage, fees and rewards.</p>
+        <h5 style="margin-top:8px;">Community</h5>
+        <div class="foot-socials">
+          <a href="index.html" data-social="x" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2.5h3.3l-7.2 8.2L23.6 22h-6.6l-5.2-6.8L5.9 22H2.6l7.7-8.8L2 2.5h6.8l4.7 6.2 5.4-6.2Zm-1.2 17.5h1.8L7.3 4.4H5.4L17.7 20Z"></path></svg></a>
+          <a href="index.html" data-social="telegram" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.6 20c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.3-.1-.5-.6-.2L6 13.5l-4.8-1.5c-1-.3-1-1 .2-1.5l18.7-7.2c.9-.3 1.6.2 1.3 1Z"></path></svg></a>
+          <a href="index.html" data-social="discord" target="_blank" rel="noopener" aria-label="Discord"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 5.3A16 16 0 0 0 15.5 4l-.3.5c1.4.3 2 .7 2.8 1.2A12 12 0 0 0 6 5.7c.7-.5 1.4-.9 2.8-1.2L8.5 4a16 16 0 0 0-4 1.3C2 9 1.4 12.6 1.7 16.2A16 16 0 0 0 6.5 18l.6-1c-.6-.2-1.2-.5-1.7-.9l.4-.3a11.4 11.4 0 0 0 9.8 0l.4.3c-.5.4-1.1.7-1.7.9l.6 1a16 16 0 0 0 4.8-1.8c.4-4.2-.6-7.8-3.2-10.9ZM8.3 14c-.8 0-1.4-.7-1.4-1.6 0-.9.6-1.6 1.4-1.6.8 0 1.4.7 1.4 1.6 0 .9-.6 1.6-1.4 1.6Zm7.4 0c-.8 0-1.4-.7-1.4-1.6 0-.9.6-1.6 1.4-1.6.8 0 1.4.7 1.4 1.6 0 .9-.6 1.6-1.4 1.6Z"></path></svg></a>
+          <a href="index.html" data-social="medium" target="_blank" rel="noopener" aria-label="Medium"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 7.5c0-.3-.1-.5-.3-.7L1 5.1V5h5.2l4 8.8L13.8 5H19v.1l-1.5 1.4c-.1.1-.2.3-.2.4v9.6c0 .2.1.3.2.4l1.5 1.4V18h-7.3v-.1l1.5-1.5c.2-.1.2-.2.2-.4V8.3l-4.2 9.6h-.6L3.9 8.3v6.4c0 .3.1.5.3.7l2 2.4V18H1v-.1l2-2.4c.2-.2.3-.4.2-.7V7.5Z"></path></svg></a>
+        </div>
+      </div>
+      <div class="foot-col"><h5>Links</h5><a href="../docs/pentacore-whitepaper_pdf.html" target="_blank" rel="noopener" data-flink="whitepaper">Whitepaper</a><a href="index.html" data-flink="docs">Docs</a><a href="index.html" data-flink="blog">Blog</a></div>
+      <div class="foot-col"><h5>Products</h5><a href="index.html" data-flink="launchpad">Launchpad</a><a href="index.html" data-flink="aiBots">AI Bots</a><a href="index.html" data-flink="aiAnalyzer">AI Analyzer</a></div>
+      <div class="foot-col"><h5>PTC Token</h5><a href="../index.html" data-flink="tokenomics">Tokenomics</a><a href="index.html" data-flink="staking">Staking</a><a href="../index.html" data-flink="roadmap">Roadmap</a></div>
+      <div class="foot-col"><h5>Presale</h5><a href="index.html" data-flink="howToBuy">How to Buy</a><a href="../wallet/index.html" data-flink="wallet">Don't have a wallet?</a><a href="https://t.me/pentacore_network" target="_blank" data-flink="support">Support</a></div>
+    </div>
+    <div class="foot-bottom">
+      <p class="disclaimer"><b style="color:rgba(255,255,255,0.7)">Disclaimer:</b> Cryptocurrency may be unregulated in your jurisdiction. The value of cryptocurrencies may fluctuate. Profits may be subject to capital gains or other taxes applicable in your jurisdiction.</p>
+      <div class="foot-legal">
+        <span><a href="../terms/index.html" style="color:inherit;text-decoration:none">Terms and Legal</a> &nbsp;|&nbsp; <a href="../privacy/index.html" style="color:inherit;text-decoration:none">Privacy &amp; Cookie Policy</a> &nbsp;|&nbsp; <a href="../risks/index.html" style="color:inherit;text-decoration:none">Risk Disclosure</a></span>
+        <span>Copyright  2025 PTC Network</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+</div>
+
+
+
+
+
+</body>

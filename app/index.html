@@ -1,0 +1,128 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-10-09T13:04:44.244Z"/><script data-language-priority="">(()=>{try{const p={"ar":"/assets/ar-fCk6ZPN1.js","da":"/assets/da-DqQyCbh2.js","de":"/assets/de-ypIO7l4l.js","es":"/assets/es-CEy-tgGx.js","fi":"/assets/fi-_Lb0IH55.js","fr":"/assets/fr-BfbXL6Xd.js","it":"/assets/it-Dx6PkEtX.js","ja":"/assets/ja-BIq72SrK.js","ko":"/assets/ko-gzbKydjF.js","nl":"/assets/nl-KtGl3kc5.js","no":"/assets/no-CDktD-xb.js","pt":"/assets/pt-BAcUTgMh.js","ru":"/assets/ru-ONBru-fC.js","th":"/assets/th-D0xvfCFK.js","tr":"/assets/tr-CnsrBEqb.js","vi":"/assets/vi-BLCuFMyJ.js","zh":"/assets/zh-eHjYyx3a.js","en":"/assets/i18n-rE1JQKOk.js"},n=v=>({nb:'no',nn:'no'}[String(v||'').toLowerCase().split(/[-_]/)[0]]||String(v||'').toLowerCase().split(/[-_]/)[0]),d=(navigator.languages||[navigator.language]).map(n).find(x=>p[x])||'en',s=n(localStorage.getItem('fundera_lang')||localStorage.getItem('i18nextLng'));for(const code of [p[s]?s:d]){if(code==='en'||!p[code])continue;const l=document.createElement('link');l.rel='modulepreload';l.crossOrigin='anonymous';l.href=p[code];document.head.append(l)}}catch{}})();</script><script>// Analytics queues still initialize immediately; only external downloads wait
+// until the first screen has had an opportunity to paint.
+window.funderaAfterContent=task=>{
+  const run=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    if('requestIdleCallback' in window)requestIdleCallback(task,{timeout:1000});
+    else setTimeout(task,0);
+  }));
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run();
+};
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('script[data-delayed-src]').forEach(node=>window.funderaAfterContent(()=>{
+    const script=document.createElement('script');script.async=true;script.src=node.dataset.delayedSrc;
+    document.head.appendChild(script);node.remove();
+  }));
+},{once:true});
+</script><link rel="preload" href="../assets/pxiByp8kv8JHgFVrLCz7Z1xlFd2JQEk-g9MkRaG0.woff2" as="font" type="font/woff2"><link rel="preload" href="../assets/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw-8kRkwJBP.woff2" as="font" type="font/woff2"><style data-header-geometry="">/* Available in the initial HTML on every route; no downloaded font swap. */
+:root{--fundera-ui-font:-apple-system,BlinkMacSystemFont,"SF Pro Display",system-ui,"Segoe UI",sans-serif;}
+.nav .navright,.dashboard-shell .topbar{font-family:var(--fundera-ui-font);}
+.nav .navright .pill,.dashboard-shell .top-control{border:1px solid rgba(255,255,255,.1);border-radius:64px;}
+.dashboard-shell .lang-trigger>svg{display:block;width:15px;height:15px;flex-shrink:0;}
+.nav .brand .word,.dashboard-shell .dashboard-header-brand .word{font-family:var(--fundera-ui-font);font-size:20px;font-weight:700;letter-spacing:-.02em;line-height:1.4;}
+.nav .navright>.btn,.dashboard-shell>.topbar .wallet.wallet-connected,.dashboard-shell>.topbar .btn-pink.header-connect{font-family:var(--fundera-ui-font);font-size:14px;font-weight:500;line-height:17px;min-width:132px;height:33px;padding:8px 14px;gap:8px;border:0;border-radius:64px;background:#FD00F4;color:#fff;box-shadow:0 8px 30px rgba(242,56,180,.3);white-space:nowrap;box-sizing:border-box;}
+@media(max-width:900px){
+ .dashboard-shell .lang-trigger{width:auto;min-width:52px;gap:6px;padding-inline:8px;}
+ .nav .brand .word,.dashboard-shell .dashboard-header-brand .word{font-size:17px!important;}
+ .nav .navright>.btn,.dashboard-shell>.topbar .wallet.wallet-connected,.dashboard-shell>.topbar .btn-pink.header-connect{font-size:12px;line-height:15px;min-width:112px;height:27px;padding:6px 12px;gap:4px;}
+}
+</style><script data-wallet-label-boot="">// Restore only the header label before the wallet SDK or page entry executes.
+(()=>{
+  window.funderaRestoreWalletLabel=root=>{
+    const button=root.querySelector('.navright > .btn');
+    if(!button)return false;
+    try{
+      const saved=JSON.parse(sessionStorage.getItem('fundera_wallet_display')||'null');
+      const namespace=sessionStorage.getItem('fundera_wallet_namespace')||'eip155';
+      const state=window.wallet?.getState?.();
+      const address=state?.address||state?.displayAddress||saved?.[namespace]||saved?.eip155||saved?.solana||saved?.tron;
+      if(typeof address==='string'&&address.length>=10&&address.length<=64){
+        if(!button.hasAttribute('data-wallet-initial-html')&&(button.querySelector('[data-i18n="nav.connect"]')||button.textContent.trim()==='Connect'))button.dataset.walletInitialHtml=button.innerHTML;
+        const label=document.createElement('span');label.textContent=address.slice(0,6)+'\u2026'+address.slice(-4);
+        button.replaceChildren(label);
+      }
+    }catch{}
+    return true;
+  };
+})();
+</script>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;window.funderaAfterContent(()=>f.parentNode.insertBefore(j,f));
+        })(window,document,'script','dataLayer','GTM-PVT5FP95');
+  </script>
+  <!-- End Google Tag Manager -->
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | Penta Core</title>
+<!-- Google tag (gtag.js) -->
+<script type="text/plain" data-delayed-src="https://www.googletagmanager.com/gtag/js?id=G-MT93Q20NKJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MT93Q20NKJ');
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+window.funderaAfterContent(()=>s.parentNode.insertBefore(t,s))}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1526616058379034');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,window.funderaAfterContent(()=>a.parentNode.insertBefore(k,a))})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(104118768, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+   ym(98903561, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<!-- /Yandex.Metrika counter -->
+  <script type="module" src="../assets/app-6baab360.js"></script>
+  <link rel="modulepreload" crossorigin="" href="../assets/i18n-rE1JQKOk.js">
+  <link rel="modulepreload" crossorigin="" href="https://fundera.io/assets/_commonjsHelpers-C4iS2aBk.js">
+  <link rel="modulepreload" crossorigin="" href="https://fundera.io/assets/client-DIhFy4Ai.js">
+  <link rel="modulepreload" crossorigin="" href="../assets/transaction-ticker-b2c1b993.js">
+  <link rel="modulepreload" crossorigin="" href="https://fundera.io/assets/fxplus-ccca938d.js">
+  <link rel="modulepreload" crossorigin="" href="../assets/ui-U1rpOh0k.js">
+  <link rel="stylesheet" href="../assets/transaction-ticker-Duhs3A--.css">
+  <link rel="stylesheet" href="../assets/app-c3jaPim-1ccdigp.css">
+  <link rel="stylesheet" href="../assets/site-fonts-BHEWlrE4.css" data-fundera-fonts="">
+</head>
+<body>
+<noscript><div><img src="../../_external/mc.yandex.ru/watch/104118768.gif" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+<noscript><div><img src="../../_external/mc.yandex.ru/watch/98903561.gif" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="root"></div>
+
+
+</body>

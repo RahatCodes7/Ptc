@@ -1,0 +1,4 @@
+/* Decorative hero artwork only. No shared header, payment or dashboard styles. */
+.hero-coins.hero-logo{left:-60px;bottom:-90px;width:680px;height:auto;aspect-ratio:3/2;filter:drop-shadow(0 18px 32px rgba(169,35,235,.16));}
+@media(min-width:1081px){.hero.hero-logo-preview{padding-bottom:112px;}}
+@media(max-width:1080px){.hero-coins.hero-logo{left:auto;bottom:auto;width:min(520px,100%);height:auto;aspect-ratio:3/2;margin:8px auto 0;}}

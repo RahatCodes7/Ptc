@@ -1,0 +1,635 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-10-09T13:04:44.244Z"/><script data-language-priority="">(()=>{try{const p={"ar":"/assets/ar-fCk6ZPN1.js","da":"/assets/da-DqQyCbh2.js","de":"/assets/de-ypIO7l4l.js","es":"/assets/es-CEy-tgGx.js","fi":"/assets/fi-_Lb0IH55.js","fr":"/assets/fr-BfbXL6Xd.js","it":"/assets/it-Dx6PkEtX.js","ja":"/assets/ja-BIq72SrK.js","ko":"/assets/ko-gzbKydjF.js","nl":"/assets/nl-KtGl3kc5.js","no":"/assets/no-CDktD-xb.js","pt":"/assets/pt-BAcUTgMh.js","ru":"/assets/ru-ONBru-fC.js","th":"/assets/th-D0xvfCFK.js","tr":"/assets/tr-CnsrBEqb.js","vi":"/assets/vi-BLCuFMyJ.js","zh":"/assets/zh-eHjYyx3a.js","en":"/assets/i18n-rE1JQKOk.js"},n=v=>({nb:'no',nn:'no'}[String(v||'').toLowerCase().split(/[-_]/)[0]]||String(v||'').toLowerCase().split(/[-_]/)[0]),d=(navigator.languages||[navigator.language]).map(n).find(x=>p[x])||'en',s=n(localStorage.getItem('fundera_lang')||localStorage.getItem('i18nextLng'));for(const code of [p[s]?s:d]){if(code==='en'||!p[code])continue;const l=document.createElement('link');l.rel='modulepreload';l.crossOrigin='anonymous';l.href=p[code];document.head.append(l)}}catch{}})();</script><style data-layout-critical="">/* Initial header geometry, available before external styles and scripts load. */
+html{background:#000;color:#fff;scrollbar-gutter:stable;-webkit-text-size-adjust:100%;text-size-adjust:100%;}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","Segoe UI",system-ui,sans-serif;}
+*,*::before,*::after{box-sizing:border-box;}a{color:inherit;text-decoration:none;}button{font:inherit;}
+.livebar,.livebar[hidden]{display:flex!important;height:43px;align-items:center;gap:16px;padding:0 32px;overflow:hidden;}
+.livebar[hidden]{visibility:hidden;}
+.nav:where(:not([aria-label="Dashboard sections"])){display:flex;align-items:center;justify-content:space-between;height:91px;padding:0 32px;position:sticky;top:0;z-index:60;}
+.nav .brand{display:flex;align-items:center;gap:9px;}.nav .mark{width:25px;height:28px;}.nav .word{font-size:20px;font-weight:700;}
+.navlinks,.navright{display:flex;align-items:center;gap:10px;}.navlinks{padding:6px 8px;}.navlinks a{padding:8px 16px;white-space:nowrap;font-size:15px;}
+.navright .pill{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border:1px solid rgba(255,255,255,.1);border-radius:64px;font-size:15px;}
+.navright svg{width:15px;height:15px;}.navright .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:8px 14px;min-width:132px;font-size:14px;border-radius:64px;}
+.langmenu,.mob-menu,.nav .mob-toggle{display:none;}.nav .brand svg{display:block;}
+.docs-skip{position:fixed;top:-80px;left:20px;}.docs-reading-progress{position:fixed;top:0;left:0;height:2px;}
+@media(min-width:901px) and (max-width:1200px){.navlinks{display:none;}.nav .mob-toggle{display:inline-flex;}}
+@media(max-width:900px){.livebar,.livebar[hidden]{padding:0 16px;}.nav{height:64px;padding:14px 12px;gap:6px;}.nav .brand{gap:6px;}.nav .word{font-size:17px;}.navlinks,.nav .lang,.navright>.pill:first-child{display:none;}.navright{gap:6px;}.navright .pill{padding:7px 12px;font-size:13px;gap:4px;}.navright .btn{padding:6px 12px;font-size:12px;gap:4px;min-width:112px;}.nav .mob-toggle{display:inline-flex;}.mob-toggle svg{width:20px;height:20px;}}
+@media(max-width:380px){.nav .word{display:none;}}
+</style><script>// Analytics queues still initialize immediately; only external downloads wait
+// until the first screen has had an opportunity to paint.
+window.funderaAfterContent=task=>{
+  const run=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    if('requestIdleCallback' in window)requestIdleCallback(task,{timeout:1000});
+    else setTimeout(task,0);
+  }));
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run();
+};
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('script[data-delayed-src]').forEach(node=>window.funderaAfterContent(()=>{
+    const script=document.createElement('script');script.async=true;script.src=node.dataset.delayedSrc;
+    document.head.appendChild(script);node.remove();
+  }));
+},{once:true});
+</script><link rel="preload" href="assets/pxiByp8kv8JHgFVrLCz7Z1xlFd2JQEk-g9MkRaG0.woff2" as="font" type="font/woff2"><link rel="preload" href="assets/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw-8kRkwJBP.woff2" as="font" type="font/woff2"><style data-header-geometry="">/* Available in the initial HTML on every route; no downloaded font swap. */
+:root{--fundera-ui-font:-apple-system,BlinkMacSystemFont,"SF Pro Display",system-ui,"Segoe UI",sans-serif;}
+.nav .navright,.dashboard-shell .topbar{font-family:var(--fundera-ui-font);}
+.nav .navright .pill,.dashboard-shell .top-control{border:1px solid rgba(255,255,255,.1);border-radius:64px;}
+.dashboard-shell .lang-trigger>svg{display:block;width:15px;height:15px;flex-shrink:0;}
+.nav .brand .word,.dashboard-shell .dashboard-header-brand .word{font-family:var(--fundera-ui-font);font-size:20px;font-weight:700;letter-spacing:-.02em;line-height:1.4;}
+.nav .navright>.btn,.dashboard-shell>.topbar .wallet.wallet-connected,.dashboard-shell>.topbar .btn-pink.header-connect{font-family:var(--fundera-ui-font);font-size:14px;font-weight:500;line-height:17px;min-width:132px;height:33px;padding:8px 14px;gap:8px;border:0;border-radius:64px;background:#FD00F4;color:#fff;box-shadow:0 8px 30px rgba(242,56,180,.3);white-space:nowrap;box-sizing:border-box;}
+@media(max-width:900px){
+ .dashboard-shell .lang-trigger{width:auto;min-width:52px;gap:6px;padding-inline:8px;}
+ .nav .brand .word,.dashboard-shell .dashboard-header-brand .word{font-size:17px!important;}
+ .nav .navright>.btn,.dashboard-shell>.topbar .wallet.wallet-connected,.dashboard-shell>.topbar .btn-pink.header-connect{font-size:12px;line-height:15px;min-width:112px;height:27px;padding:6px 12px;gap:4px;}
+}
+</style><script data-wallet-label-boot="">// Restore only the header label before the wallet SDK or page entry executes.
+(()=>{
+  window.funderaRestoreWalletLabel=root=>{
+    const button=root.querySelector('.navright > .btn');
+    if(!button)return false;
+    try{
+      const saved=JSON.parse(sessionStorage.getItem('fundera_wallet_display')||'null');
+      const namespace=sessionStorage.getItem('fundera_wallet_namespace')||'eip155';
+      const state=window.wallet?.getState?.();
+      const address=state?.address||state?.displayAddress||saved?.[namespace]||saved?.eip155||saved?.solana||saved?.tron;
+      if(typeof address==='string'&&address.length>=10&&address.length<=64){
+        if(!button.hasAttribute('data-wallet-initial-html')&&(button.querySelector('[data-i18n="nav.connect"]')||button.textContent.trim()==='Connect'))button.dataset.walletInitialHtml=button.innerHTML;
+        const label=document.createElement('span');label.textContent=address.slice(0,6)+'\u2026'+address.slice(-4);
+        button.replaceChildren(label);
+      }
+    }catch{}
+    return true;
+  };
+})();
+</script>
+  <!-- English content stays visible while the device language prepares in parallel. -->
+  <script>
+    (()=>{try{const a=["en","vi","nl","tr","it","zh","fr","es","da","de","ja","ko","ar","no","ru","pt","fi","th"],n=v=>({nb:"no",nn:"no"}[String(v||"").toLowerCase().split(/[-_]/)[0]]||String(v||"").toLowerCase().split(/[-_]/)[0]),s=localStorage.getItem("fundera_lang")||localStorage.getItem("i18nextLng"),d=s?[s]:(navigator.languages?.length?navigator.languages:[navigator.language]),l=d.map(n).find(x=>a.includes(x))||"en";if(l!=="en"){document.documentElement.lang=l;document.documentElement.dir=l==="ar"?"rtl":"ltr";document.documentElement.classList.add("i18n-boot");setTimeout(()=>document.documentElement.classList.remove("i18n-boot"),1500)}}catch(e){}})();
+  </script>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;window.funderaAfterContent(()=>f.parentNode.insertBefore(j,f));
+        })(window,document,'script','dataLayer','GTM-PVT5FP95');
+  </script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script type="text/plain" data-delayed-src="https://www.googletagmanager.com/gtag/js?id=G-MT93Q20NKJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MT93Q20NKJ');
+  </script>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  window.funderaAfterContent(()=>s.parentNode.insertBefore(t,s))}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1526616058379034');
+  fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,window.funderaAfterContent(()=>a.parentNode.insertBefore(k,a))})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(104118768, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true,
+          webvisor:true
+    });
+    ym(98903561, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true,
+          webvisor:true
+    });
+  </script>
+  <!-- /Yandex.Metrika counter -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Token. More Ways to Earn. | Penta Core</title>
+<meta name="description" content="Unlock levels, staking, bonus pools, and exclusive PTC rewards.">
+<link rel="icon" type="image/x-icon" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pentacore.io/">
+<meta property="og:site_name" content="Penta Core">
+<meta property="og:title" content="One Token. More Ways to Earn. | Penta Core">
+<meta property="og:description" content="Explore $PTC levels, staking rewards and bonuses in leading cryptocurrencies.">
+<meta property="og:image" content="land/penta-core-logo.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="Penta Core — One Token. More Ways to Earn.">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="One Token. More Ways to Earn. | Penta Core">
+<meta name="twitter:description" content="Explore $PTC levels, staking rewards and bonuses in leading cryptocurrencies.">
+<meta name="twitter:image" content="land/penta-core-logo.png">
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" fill="#070707"></rect>
+    <circle cx="74" cy="26" r="24" fill="#FD00F4" opacity="0.5"></circle>
+    <path d="M44.3 18.2c1.3-.7 2.9-.7 4.2 0l14.5 8.3c1.3.8 2.1 2.2 2.1 3.7v16.7c0 1.5-.8 2.9-2.1 3.7l-14.5 8.3c-1.3.8-2.9.8-4.2 0L29.8 50.6c-1.3-.8-2.1-2.2-2.1-3.7V30.2c0-1.5.8-2.9 2.1-3.7l14.5-8.3Z" fill="none" stroke="#fff" stroke-width="2.4"></path>
+    <text x="50" y="84" font-family="Poppins,sans-serif" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">penta core.</text>
+  </svg>
+</template>
+  <script type="module" src="assets/main-c45a4f18.js"></script>
+  <link rel="modulepreload" crossorigin="" href="assets/i18n-rE1JQKOk.js">
+  <link rel="modulepreload" crossorigin="" href="assets/transaction-ticker-b2c1b993.js">
+  <link rel="modulepreload" crossorigin="" href="assets/header-controls-f07d1d71.js">
+  <link rel="modulepreload" crossorigin="" href="https://fundera.io/assets/payment-icons-CCjC9Tmd.js">
+  <link rel="modulepreload" crossorigin="" href="https://fundera.io/assets/fxplus-ccca938d.js">
+  <link rel="modulepreload" crossorigin="" href="assets/ui-U1rpOh0k.js">
+  <link rel="stylesheet" href="assets/header-controls-DDz9dF5C.css">
+  <link rel="stylesheet" href="assets/transaction-ticker-Duhs3A--.css">
+  <link rel="stylesheet" href="assets/site-fonts-BHEWlrE4.css" data-fundera-fonts="">
+<link rel="stylesheet" href="land/fundera-hero-logo-v1.css">
+<link rel="stylesheet" href="land/fundera-bonus-art-v2.css">
+</head>
+<body>
+  <noscript><img height="1" width="1" style="display:none" src="../_external/www.facebook.com/tr.id_1526616058379034_ev_PageView_noscript_1.plain"></noscript>
+  <noscript><div><img src="../_external/mc.yandex.ru/watch/104118768.gif" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+  <noscript><div><img src="../_external/mc.yandex.ru/watch/98903561.gif" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+<div class="page-scale" id="pageScale">
+<div class="lp" id="lp">
+
+<!-- ============ AMBIENT GLOW TEXTURES (alive background) ============ -->
+<div class="lp-fx" aria-hidden="true">
+  <span class="gfx t1" style="--t:1%;--x:-4%;--s:600px;--o:.62;--rot:-6deg;--dx:26px;--dy:34px;--d:19s"></span>
+  <span class="gfx t3" style="--t:4%;--r:-6%;--s:560px;--o:.5;--rot:10deg;--dx:-30px;--dy:24px;--d:22s"></span>
+  <span class="gfx t6" style="--t:13%;--x:-3%;--s:480px;--o:.42;--rot:0deg;--dx:30px;--dy:-20px;--d:17s"></span>
+  <span class="gfx t9" style="--t:21%;--r:-4%;--s:520px;--o:.5;--rot:-12deg;--dx:-22px;--dy:30px;--d:24s"></span>
+  <span class="gfx t4" style="--t:31%;--x:-5%;--s:560px;--o:.46;--rot:8deg;--dx:28px;--dy:26px;--d:20s"></span>
+  <span class="gfx t5" style="--t:40%;--r:-5%;--s:600px;--o:.5;--rot:-4deg;--dx:-26px;--dy:-24px;--d:23s"></span>
+  <span class="gfx t7" style="--t:50%;--x:18%;--s:640px;--o:.5;--rot:0deg;--dx:20px;--dy:30px;--d:21s"></span>
+  <span class="gfx t2" style="--t:60%;--r:-4%;--s:520px;--o:.46;--rot:14deg;--dx:-28px;--dy:22px;--d:18s"></span>
+  <span class="gfx t8" style="--t:69%;--x:-4%;--s:540px;--o:.44;--rot:-8deg;--dx:24px;--dy:-26px;--d:25s"></span>
+  <span class="gfx t3" style="--t:78%;--r:-5%;--s:560px;--o:.48;--rot:6deg;--dx:-24px;--dy:28px;--d:20s"></span>
+  <span class="gfx t6" style="--t:87%;--x:-3%;--s:500px;--o:.44;--rot:-10deg;--dx:30px;--dy:24px;--d:22s"></span>
+  <span class="gfx t1" style="--t:95%;--r:-4%;--s:580px;--o:.52;--rot:8deg;--dx:-26px;--dy:-22px;--d:19s"></span>
+</div>
+
+<!-- ============ LIVE BAR ============ -->
+<div class="livebar">
+  <span class="pulse"></span><span class="live">LIVE</span><span class="sep">|</span>
+  <div class="ticker"><div class="track" id="ticker"></div></div>
+</div>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <a class="brand" href="index.html">
+    <img class="mark" src="land/penta-core-logo.png" alt="Penta Core" style="width:32px;height:32px;object-fit:cover;border-radius:50%;display:block;">
+    <span class="word">Penta Core.</span>
+  </a>
+  <div class="navlinks">
+    <a href="index.html" class="active" data-i18n="nav.main">Main</a><a href="index.html" data-i18n="nav.tokenomics">Tokenomics</a><a href="index.html" data-i18n="nav.howToBuy">How to buy</a><a href="index.html" data-i18n="nav.roadmap">Roadmap</a><a href="docs/pentacore-whitepaper_pdf.html" target="_blank" rel="noopener" data-flink="whitepaper">Whitepaper</a><a href="docs/index.html" data-i18n="nav.docs" data-flink="docs">Docs</a>
+  </div>
+  <div class="navright">
+    <button class="pill" id="socialBtn"><span data-i18n="nav.social">Social</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></button>
+    <div class="lang" id="langDd">
+      <button class="pill langbtn"><span class="flag flag-en"></span>EN <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></button>
+      <div class="langmenu">
+        <a class="active"><span class="flag flag-en"></span>EN</a>
+        <a><span class="flag flag-kz"></span>KZ</a>
+        <a><span class="flag flag-uk"></span>UK</a>
+      </div>
+    </div>
+    <a class="pill" href="app/index.html" data-app-link=""><span data-i18n="nav.app">App</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10M7 17 17 7"></path></svg></a>
+    <button class="btn"><span data-i18n="nav.connect">Connect</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 7V5a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4M21 12v6a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V6"></path><path d="M18 13h.01"></path></svg></button>
+    <script>window.funderaRestoreWalletLabel?.(document);</script>
+    <button class="pill mob-toggle" id="mobToggle" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+  </div>
+</nav>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mob-menu" id="mobMenu">
+  <div class="mob-links">
+    <a href="index.html" class="active" data-i18n="nav.main">Main<span class="dot"></span></a>
+    <a href="index.html" data-i18n="nav.tokenomics">Tokenomics</a>
+    <a href="how-to-buy/index.html" data-i18n="nav.howToBuy">How to buy</a>
+    <a href="index.html" data-i18n="nav.roadmap">Roadmap</a>
+    <a href="docs/pentacore-whitepaper_pdf.html" target="_blank" rel="noopener" data-flink="whitepaper">Whitepaper</a>
+    <a href="docs/index.html" data-i18n="nav.docs" data-flink="docs">Docs</a>
+  </div>
+  <div class="mob-foot">
+    <div class="lang" id="mobLangDd2">
+      <button class="pill langbtn"><span class="flag flag-en"></span>EN <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></button>
+      <div class="langmenu">
+        <a class="active"><span class="flag flag-en"></span>EN</a>
+        <a><span class="flag flag-kz"></span>KZ</a>
+        <a><span class="flag flag-uk"></span>UK</a>
+      </div>
+    </div>
+    <div class="mob-community">
+      <div class="mob-com-label">Community</div>
+      <div class="foot-socials">
+        <a href="https://x.com/PentaCore_io" target="_blank" aria-label="X" data-social="x"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2.5h3.3l-7.2 8.2L23.6 22h-6.6l-5.2-6.8L5.9 22H2.6l7.7-8.8L2 2.5h6.8l4.7 6.2 5.4-6.2Zm-1.2 17.5h1.8L7.3 4.4H5.4L17.7 20Z"></path></svg></a>
+        <a href="https://t.me/pentacore_network" target="_blank" aria-label="Telegram" data-social="telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.6 20c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.3-.1-.5-.6-.2L6 13.5l-4.8-1.5c-1-.3-1-1 .2-1.5l18.7-7.2c.9-.3 1.6.2 1.3 1Z"></path></svg></a>
+        <a href="https://discord.gg/" target="_blank" aria-label="Discord" data-social="discord"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 5.3A16 16 0 0 0 15.5 4l-.3.5c1.4.3 2 .7 2.8 1.2A12 12 0 0 0 6 5.7c.7-.5 1.4-.9 2.8-1.2L8.5 4a16 16 0 0 0-4 1.3C2 9 1.4 12.6 1.7 16.2A16 16 0 0 0 6.5 18l.6-1c-.6-.2-1.2-.5-1.7-.9l.4-.3a11.4 11.4 0 0 0 9.8 0l.4.3c-.5.4-1.1.7-1.7.9l.6 1a16 16 0 0 0 4.8-1.8c.4-4.2-.6-7.8-3.2-10.9ZM8.3 14c-.8 0-1.4-.7-1.4-1.6 0-.9.6-1.6 1.4-1.6.8 0 1.4.7 1.4 1.6 0 .9-.6 1.6-1.4 1.6Zm7.4 0c-.8 0-1.4-.7-1.4-1.6 0-.9.6-1.6 1.4-1.6.8 0 1.4.7 1.4 1.6 0 .9-.6 1.6-1.4 1.6Z"></path></svg></a>
+        <a href="index.html" target="_blank" aria-label="Medium" data-social="medium"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 7.5c0-.3-.1-.5-.3-.7L1 5.1V5h5.2l4 8.8L13.8 5H19v.1l-1.5 1.4c-.1.1-.2.3-.2.4v9.6c0 .2.1.3.2.4l1.5 1.4V18h-7.3v-.1l1.5-1.5c.2-.1.2-.2.2-.4V8.3l-4.2 9.6h-.6L3.9 8.3v6.4c0 .3.1.5.3.7l2 2.4V18H1v-.1l2-2.4c.2-.2.3-.4.2-.7V7.5Z"></path></svg></a>
+        <a href="index.html" target="_blank" aria-label="CoinMarketCap" data-social="coinmarketcap"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3-10.5h-2V7h-2v2.5H9v2h2V14h2v-2.5h2v-2z"></path></svg></a>
+        <a href="index.html" target="_blank" aria-label="CoinGecko" data-social="coingecko"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.5 14H7v-2h9.5v2zm0-4H7v-2h9.5v2zm-3-4H7V6h6.5v2z"></path></svg></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============ HERO ============ -->
+<section class="hero wrap hero-logo-preview" id="top">
+  <div class="hero-watermark">penta core</div>
+  <div class="hero-coins hero-logo" aria-hidden="true" style="--art-mobile:url(/land/penta-core-logo.png);--art-desktop:url(/land/penta-core-logo.png);background-image:var(--art-desktop)"></div>
+  <div class="hero-grid">
+    <div class="hero-left">
+      <span class="eyebrow" data-i18n="hero.eyebrow">Real Yield Token</span>
+      <h1><span class="w" data-i18n="hero.line1">One Token.</span><br><span class="p" data-gradient="More Ways to Earn." data-i18n="hero.line2">More Ways to Earn.</span></h1>
+      <div class="htext">Buy more $PTC to increase your level<br>
+        <span style="display:inline-flex;align-items:center;">and unlock bigger bonuses in
+          <span class="chains" id="heroChains"><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#F7931A"></circle><path d="M16.2 10.6c.2-1.4-.85-2.1-2.3-2.6l.47-1.9-1.15-.28-.46 1.85c-.3-.08-.62-.15-.93-.22l.46-1.86-1.15-.28-.47 1.9c-.25-.06-.5-.11-.74-.17l-1.6-.4-.3 1.23s.86.2.84.21c.47.12.55.43.54.68l-1.3 5.23c-.06.15-.21.36-.53.28.01.02-.85-.21-.85-.21l-.57 1.32 1.5.38c.28.07.55.15.82.21l-.48 1.92 1.15.28.47-1.9c.31.09.62.16.92.24l-.47 1.89 1.15.28.48-1.92c1.96.37 3.44.22 4.06-1.55.5-1.43-.02-2.25-1.06-2.79.76-.17 1.33-.67 1.48-1.7Zm-2.65 3.7c-.36 1.43-2.76.66-3.54.46l.63-2.53c.78.2 3.28.58 2.91 2.07Zm.36-3.72c-.32 1.3-2.32.64-2.97.48l.57-2.3c.65.16 2.74.46 2.4 1.82Z" fill="#fff"></path></svg></span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#627EEA"></circle><path d="M12.13 3v6.65l5.62 2.51L12.13 3Z" fill="#fff" fill-opacity=".6"></path><path d="M12.13 3 6.5 12.16l5.63-2.51V3Z" fill="#fff"></path><path d="M12.13 16.48v4.52l5.63-7.78-5.63 3.26Z" fill="#fff" fill-opacity=".6"></path><path d="M12.13 21v-4.52L6.5 13.22 12.13 21Z" fill="#fff"></path><path d="m12.13 15.43 5.62-3.27-5.62-2.5v5.77Z" fill="#fff" fill-opacity=".2"></path><path d="M6.5 12.16l5.63 3.27V9.66L6.5 12.16Z" fill="#fff" fill-opacity=".6"></path></svg></span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#26A17B"></circle><path d="M13.4 10.5v-1.4h3.2V7H7.4v2.1h3.2v1.4c-2.6.12-4.56.64-4.56 1.26 0 .62 1.96 1.14 4.56 1.26v4.48h2.8v-4.48c2.6-.12 4.55-.64 4.55-1.26 0-.62-1.95-1.14-4.55-1.26Zm0 2.13c-.07 0-.42.03-1.38.03-.77 0-1.31-.02-1.5-.03-2.96-.13-5.17-.65-5.17-1.27 0-.62 2.21-1.13 5.17-1.26v2.03c.2.01.76.04 1.51.04.92 0 1.3-.03 1.37-.04v-2.03c2.95.13 5.16.64 5.16 1.26 0 .62-2.21 1.13-5.16 1.27Z" fill="#fff"></path></svg></span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#F3BA2F"></circle><path d="M8.7 10.7 12 7.4l3.31 3.31 1.92-1.92L12 3.57 6.78 8.79 8.7 10.7ZM3.57 12l1.92-1.92L7.4 12l-1.92 1.92L3.57 12Zm5.13 1.3L12 16.6l3.3-3.3 1.93 1.9L12 20.43l-5.22-5.21 1.93-1.91ZM16.6 12l1.92-1.92L20.43 12l-1.92 1.92L16.6 12Zm-2.66-.01L12 10.04 10.55 11.49l-.51.52L12 13.96 13.94 12Z" fill="#fff"></path></svg></span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#000"></circle><defs><linearGradient id="solg" x1="6" y1="17" x2="18" y2="7" gradientUnits="userSpaceOnUse"><stop stop-color="#9945FF"></stop><stop offset="1" stop-color="#14F195"></stop></linearGradient></defs><g fill="url(#solg)"><path d="M7.3 15.5a.5.5 0 0 1 .36-.15h9.1c.27 0 .4.32.22.5l-1.6 1.6a.5.5 0 0 1-.36.15h-9.1c-.27 0-.4-.32-.21-.5l1.6-1.6Z"></path><path d="M7.3 6.5a.5.5 0 0 1 .36-.15h9.1c.27 0 .4.32.22.5l-1.6 1.6a.5.5 0 0 1-.36.16h-9.1c-.27 0-.4-.33-.21-.51l1.6-1.6Z"></path><path d="M15.34 11a.5.5 0 0 0-.36-.15h-9.1c-.27 0-.4.32-.22.5l1.6 1.6a.5.5 0 0 0 .37.16h9.09c.27 0 .4-.33.22-.51l-1.6-1.6Z"></path></g></svg></span></span>
+        </span>
+      </div>
+    </div>
+
+    <!-- full buy widget card -->
+    <div class="buycard" aria-busy="true">
+      <div class="bc-head">
+        <span class="bc-h1"><i class="livedot"></i>Buy Before Rise!</span>
+        <span class="bc-timer timer-skeleton" data-timer-loading="" data-settings-loading="" aria-busy="true"><span data-i18n="bc.nextPriceIn">Next price in</span> <b>--</b><em>:</em><b>--</b><em>:</em><b>--</b><em>:</em><b>--</b></span>
+      </div>
+      <div class="bc-pricebox">
+        <div class="bc-prow">
+          <div><div class="bc-price economics-skeleton" id="bcRaised" data-economics-loading="">—</div><div class="bc-sub">Total Raised USD</div></div>
+          <div class="bc-pill"><span class="fdrg sm" id="bcPill"><img src="land/penta-core-logo.png" alt="PTC" width="24" height="24" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></span><span data-i18n="bc.perFdr">1 $PTC =</span><span>$<span class="economics-skeleton" id="bcPrice" data-economics-loading="">—</span></span></div>
+        </div>
+        <div class="bc-progtop"><span class="economics-skeleton" id="bcProgPct" data-economics-loading="">— <span data-i18n="bc.untilRise">until price rise</span></span><span class="economics-skeleton" id="bcCap" data-economics-loading="">—</span></div>
+        <div class="bc-progbar"><span class="economics-skeleton" data-economics-loading="" style="width:0%"></span></div>
+        <div class="bc-lastprice">
+          <span class="bc-priceitem"><span class="bc-pricelabel" data-i18n="bc.nextPrice">Next Price</span><strong class="bc-pricevalue">$<span class="economics-skeleton" id="bcNext" data-economics-loading="">—</span></strong></span>
+          <svg class="bc-pricearrow" viewBox="0 0 24 12" fill="none" aria-hidden="true"><path d="M1 6h20M16 1l5 5-5 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <span class="bc-priceitem bc-priceitem-listing"><span class="bc-pricelabel" data-i18n="bc.listingPrice">Listing Price</span><strong class="bc-pricevalue">$<span class="economics-skeleton" id="bcLast" data-economics-loading="">—</span></strong></span>
+        </div>
+      </div>
+      <div class="bc-netlabel">Choose Payment Network</div>
+      <div class="bc-nets" id="bcNets"><button class="bc-netbtn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#F7931A"></circle><path d="M16.2 10.6c.2-1.4-.85-2.1-2.3-2.6l.47-1.9-1.15-.28-.46 1.85c-.3-.08-.62-.15-.93-.22l.46-1.86-1.15-.28-.47 1.9c-.25-.06-.5-.11-.74-.17l-1.6-.4-.3 1.23s.86.2.84.21c.47.12.55.43.54.68l-1.3 5.23c-.06.15-.21.36-.53.28.01.02-.85-.21-.85-.21l-.57 1.32 1.5.38c.28.07.55.15.82.21l-.48 1.92 1.15.28.47-1.9c.31.09.62.16.92.24l-.47 1.89 1.15.28.48-1.92c1.96.37 3.44.22 4.06-1.55.5-1.43-.02-2.25-1.06-2.79.76-.17 1.33-.67 1.48-1.7Zm-2.65 3.7c-.36 1.43-2.76.66-3.54.46l.63-2.53c.78.2 3.28.58 2.91 2.07Zm.36-3.72c-.32 1.3-2.32.64-2.97.48l.57-2.3c.65.16 2.74.46 2.4 1.82Z" fill="#fff"></path></svg><span>BTC</span></button><button class="bc-netbtn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#627EEA"></circle><path d="M12.13 3v6.65l5.62 2.51L12.13 3Z" fill="#fff" fill-opacity=".6"></path><path d="M12.13 3 6.5 12.16l5.63-2.51V3Z" fill="#fff"></path><path d="M12.13 16.48v4.52l5.63-7.78-5.63 3.26Z" fill="#fff" fill-opacity=".6"></path><path d="M12.13 21v-4.52L6.5 13.22 12.13 21Z" fill="#fff"></path><path d="m12.13 15.43 5.62-3.27-5.62-2.5v5.77Z" fill="#fff" fill-opacity=".2"></path><path d="M6.5 12.16l5.63 3.27V9.66L6.5 12.16Z" fill="#fff" fill-opacity=".6"></path></svg><span>ETH</span></button><button class="bc-netbtn sel"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#F3BA2F"></circle><path d="M8.7 10.7 12 7.4l3.31 3.31 1.92-1.92L12 3.57 6.78 8.79 8.7 10.7ZM3.57 12l1.92-1.92L7.4 12l-1.92 1.92L3.57 12Zm5.13 1.3L12 16.6l3.3-3.3 1.93 1.9L12 20.43l-5.22-5.21 1.93-1.91ZM16.6 12l1.92-1.92L20.43 12l-1.92 1.92L16.6 12Zm-2.66-.01L12 10.04 10.55 11.49l-.51.52L12 13.96 13.94 12Z" fill="#fff"></path></svg><span>BSC</span></button><button class="bc-netbtn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#0052FF"></circle><path d="M11.96 20a8 8 0 1 0-7.94-9.02h10.5v2.06H4.02A8 8 0 0 0 11.96 20Z" fill="#fff"></path></svg><span>BASE</span></button><button class="bc-netbtn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#ef0027"></circle><path d="m5 5 14 3-8 12L5 5Zm0 0 6 6 8-3M11 11v9" fill="none" stroke="#fff" stroke-width="1.3" stroke-linejoin="round"></path></svg><span>TRON</span></button><button class="bc-netbtn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#000"></circle><defs><linearGradient id="solg" x1="6" y1="17" x2="18" y2="7" gradientUnits="userSpaceOnUse"><stop stop-color="#9945FF"></stop><stop offset="1" stop-color="#14F195"></stop></linearGradient></defs><g fill="url(#solg)"><path d="M7.3 15.5a.5.5 0 0 1 .36-.15h9.1c.27 0 .4.32.22.5l-1.6 1.6a.5.5 0 0 1-.36.15h-9.1c-.27 0-.4-.32-.21-.5l1.6-1.6Z"></path><path d="M7.3 6.5a.5.5 0 0 1 .36-.15h9.1c.27 0 .4.32.22.5l-1.6 1.6a.5.5 0 0 1-.36.16h-9.1c-.27 0-.4-.33-.21-.51l1.6-1.6Z"></path><path d="M15.34 11a.5.5 0 0 0-.36-.15h-9.1c-.27 0-.4.32-.22.5l1.6 1.6a.5.5 0 0 0 .37.16h9.09c.27 0 .4-.33.22-.51l-1.6-1.6Z"></path></g></svg><span>SOL</span></button></div>
+      <div class="bc-io">
+        <div class="bc-iol"><span class="bc-coin" id="bcUsdt"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#F3BA2F"></circle><path d="M8.7 10.7 12 7.4l3.31 3.31 1.92-1.92L12 3.57 6.78 8.79 8.7 10.7ZM3.57 12l1.92-1.92L7.4 12l-1.92 1.92L3.57 12Zm5.13 1.3L12 16.6l3.3-3.3 1.93 1.9L12 20.43l-5.22-5.21 1.93-1.91ZM16.6 12l1.92-1.92L20.43 12l-1.92 1.92L16.6 12Zm-2.66-.01L12 10.04 10.55 11.49l-.51.52L12 13.96 13.94 12Z" fill="#fff"></path></svg></span><div class="bc-curwrap"><div class="bc-cur">BNB <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></div><div class="bc-cursub">Binance</div></div></div>
+        <div class="bc-ior"><input class="bc-amt editable-amt economics-skeleton" data-economics-loading="" value="" disabled="" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-label="Payment amount"><div class="bc-amtsub economics-skeleton" data-economics-loading="">—</div></div>
+      </div>
+      <div class="bc-swapwrap"><button class="bc-swap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"></path></svg></button></div>
+      <div class="bc-io">
+        <div class="bc-iol"><span class="fdrg" id="bcFdr"><img src="land/penta-core-logo.png" alt="PTC" width="32" height="32" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></span><div class="bc-curwrap"><div class="bc-cur">$PTC</div><div class="bc-cursub">Penta Core</div></div></div>
+        <div class="bc-ior"><input class="bc-amt editable-amt economics-skeleton" data-economics-loading="" value="" disabled="" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-label="PTC amount"><div class="bc-amtsub economics-skeleton" data-economics-loading=""><span data-i18n="bc.price">Price:</span> $<span id="bcPrice2">—</span></div></div>
+      </div>
+      <div class="bc-bonus" hidden="">
+        <span class="bc-bcode">Bonus code: <b></b> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span>
+        <span class="bc-badge"></span>
+      </div>
+      <div class="bc-codebtns" data-settings-loading="">
+        <button data-code-field="referral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>Referral code</button>
+        <button data-code-field="bonus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7"></path></svg>Bonus code</button>
+      </div>
+      <div class="bc-applied-bonus" hidden="">
+        <div class="bc-applied-check">✓</div>
+        <div class="bc-applied-copy"><strong>Bonus code activated</strong><span><b class="bc-applied-code"></b> · <span class="bc-applied-percent"></span> extra <i class="bc-applied-limit" hidden=""></i></span></div>
+        <div class="bc-applied-amount"><span>Free bonus</span><strong>+<span class="bc-applied-tokens">0</span> PTC</strong></div>
+      </div>
+      <button class="btn bc-buy" disabled=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 7V5a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4M21 12v6a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V6"></path><path d="M18 13h.01"></path></svg><span data-i18n="cta.buyFdr">Buy $PTC</span></button>
+      <p class="bc-terms">By proceeding, you agree to our <a href="terms/index.html" target="_blank" class="text-link">Terms</a> and <a href="privacy/index.html" target="_blank" class="text-link">Policy</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY HOLDING ============ -->
+<section class="wrap sec-pad" id="why">
+  <h2 class="h-sec"><span data-i18n="levels.title1">Hold More $PTC.</span><br><span class="pink" data-i18n="levels.title2">Unlock More Value.</span></h2>
+  <p class="sub" data-i18n="levels.subtitle" style="margin-top:24px;max-width:720px;">Grow your $PTC balance to reach higher levels, unlock staking, and earn bigger ecosystem rewards.</p>
+  <div class="why-grid" id="whyGrid"></div>
+</section>
+
+<!-- ============ WHERE BONUSES COME FROM ============ -->
+<section class="wrap sec-pad" id="bonuses">
+  <h2 class="h-sec">Where Your<br><span style="color:var(--pink)">Bonuses Come From</span></h2>
+  <p class="sub" style="margin-top:24px;max-width:520px;">Platform fees are collected from multiple sources<br>and distributed to $PTC holders.</p>
+
+  <!-- fixed 1164-wide canvas, scaled to fit via JS -->
+  <div class="bonus-stage" id="bonusStage">
+    <div class="bonus-canvas" id="bonusCanvas">
+      <!-- ambient glows -->
+      <div class="bz-glow" style="left:520px;top:440px;"></div>
+      <div class="bz-glow" style="left:80px;top:760px;width:620px;height:440px;opacity:.45;"></div>
+
+      <!-- connector lines (behind cards) -->
+      <svg class="bz-flow" viewBox="0 0 1164 1167" aria-hidden="true">
+        <defs>
+          <marker id="barw" markerWidth="11" markerHeight="11" refX="4.5" refY="5" orient="auto">
+            <path d="M1 1.5 L6.5 5 L1 8.5" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+          </marker>
+        </defs>
+        <g fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5">
+          <!-- Token Fees stub down toward the flower -->
+          <path d="M145 268 V352"></path>
+          <!-- Sale Fees down into Fee Pool -->
+          <path d="M560 268 V566" marker-end="url(#barw)"></path>
+          <!-- Platform Fees down then left into Fee Pool -->
+          <path d="M820 486 V633 a20 20 0 0 1 -20 20 H700" marker-end="url(#barw)"></path>
+          <!-- Fee Pool down to Holder Rewards -->
+          <path d="M600 736 V916 a20 20 0 0 0 20 20 H660" marker-end="url(#barw)"></path>
+        </g>
+      </svg>
+
+      <!-- coin flower in circle -->
+      <div class="bz-flower">
+        <span class="bz-ring"></span>
+        <span class="bz-ring r2"></span>
+        <span class="bz-floimg" style="--art-mobile:url(/land/penta-core-logo.png);--art-desktop:url(/land/penta-core-logo.png);background-image:var(--art-desktop)"></span>
+        <span class="bz-hole"></span>
+      </div>
+
+      <!-- floating images -->
+      <div class="bz-coin" style="--art-mobile:url(/land/penta-core-logo.png);--art-desktop:url(/land/penta-core-logo.png);background-image:var(--art-desktop)"></div>
+      <div class="bz-widget bz-purchase-art" aria-hidden="true" style="--art-mobile:url(/land/fundera-purchase-ui-480.webp);--art-desktop:url(/land/fundera-purchase-ui-960.webp);background-image:var(--art-desktop)"></div>
+      <div class="bz-phone bz-swap-art" aria-hidden="true" style="--art-mobile:url(/land/fundera-terminal-reversed-final-480.webp);--art-desktop:url(/land/fundera-terminal-reversed-final-960.webp);background-image:var(--art-desktop)"></div>
+      <div class="bz-people" style="--art-mobile:url(/land/people.webp);--art-desktop:url(/land/people.webp);background-image:var(--art-desktop)"></div>
+
+      <!-- fee cards -->
+      <div class="bz-card" style="left:0px;top:103px;">
+        <span class="bz-badge up">Upcoming</span>
+        <div class="bz-row"><span class="bz-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="12" r="3"></circle><path d="M12 9.5 19 5M12 14.5 19 19M9 12h-.01"></path></svg></span><b>Token Fees</b></div>
+        <p>Fees from each transaction.<br>More activity increases fees.</p>
+      </div>
+      <div class="bz-card" style="left:407px;top:103px;">
+        <span class="bz-badge act">Active</span>
+        <div class="bz-row"><span class="bz-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3v18h18"></path><path d="m7 14 3-3 3 3 4-5"></path></svg></span><b>Sale Fees</b></div>
+        <p>Fees from token purchases.<br>Early demand drives more volume.</p>
+      </div>
+      <div class="bz-card" style="left:697px;top:321px;">
+        <span class="bz-badge act">Active</span>
+        <div class="bz-row"><span class="bz-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 10h18"></path></svg></span><b>Platform Fees</b></div>
+        <p>Fees from trading and usage.<br>More users generate more activity.</p>
+      </div>
+      <div class="bz-card" style="left:407px;top:571px;">
+        <span class="bz-badge act">Active</span>
+        <div class="bz-row"><span class="bz-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span><b>Fee Pool</b></div>
+        <p>All fees are collected.<br>Used for further distribution.</p>
+      </div>
+      <div class="bz-card" style="left:664px;top:862px;">
+        <div class="bz-row"><span class="bz-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"></path><circle cx="9.5" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87M17 3.13A4 4 0 0 1 17 11"></path></svg></span><b>Holder Rewards</b></div>
+        <p>A share goes to holders.<br>The more you hold, the more you receive.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bonuses Paid to Holders banner -->
+  <div class="holders">
+    <div class="hd-coins l" style="background-image:url(land/penta-core-logo.png)"></div>
+    <div class="hd-coins r" style="background-image:url(land/penta-core-logo.png)"></div>
+    <div class="hd-inner">
+      <div class="hd-tokens" id="hdTokens"></div>
+      <h3>Bonuses Paid to Holders</h3>
+      <p class="sub" style="margin-top:8px;">A share of platform fees is paid to $PTC holders.<br>The more you hold, the more you receive.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRADING PLATFORM ============ -->
+<section class="wrap sec-pad">
+  <div class="platform">
+    <div class="platform-copy">
+      <h2 class="h-sec" style="margin:20px 0;"><span class="pink">Trading Platform</span><br>&amp; <span>Prediction Markets</span></h2>
+      <p>Trading tools and real-world prediction markets in one ecosystem. Follow market activity, explore events and manage your wallet from one dashboard.</p>
+    </div>
+    <div class="platform-stage">
+      <img class="phone" src="land/phone-mockup-960.webp" sizes="(max-width:720px) 90vw, 600px" alt="Penta Core trading platform and prediction markets" loading="lazy" decoding="async">
+      <article class="pfeat pfeat-1"><span class="pfeat-dot"></span><h4>Multi Chain Trading</h4><p>Trade assets across multiple blockchain networks from one unified platform.</p></article>
+      <article class="pfeat pfeat-2"><span class="pfeat-dot"></span><h4>Prediction Markets</h4><p>Explore real-world events, compare outcome probabilities and follow live market data.</p></article>
+      <article class="pfeat pfeat-3"><span class="pfeat-dot"></span><h4>One Dashboard</h4><p>Your wallet, market activity and the $PTC ecosystem — connected in one place.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOKENOMICS ============ -->
+<section class="wrap sec-pad" id="tokenomics">
+  <div class="tok-body">
+    <div class="tok-left">
+      <h2 class="h-sec">Tokenomics</h2>
+      <p class="sub" style="margin-top:24px;max-width:430px;">Transparent supply, fixed emissions,<br>and value-driven mechanics</p>
+      <div class="token-audit" aria-label="Smart Contract Verified and Audited">
+        <div class="bc-audit-badge">
+          <span class="bc-audit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 20 6v5c0 5-3.4 8.5-8 10-4.6-1.5-8-5-8-10V6l8-3Z"></path><path d="m8.5 12 2.2 2.2 4.8-5"></path></svg></span>
+          <span>Smart Contract Verified &amp; Audited</span>
+        </div>
+      </div>
+      <div class="token-legend" id="legend" style="margin-top:40px;"></div>
+      <div class="total">
+        <span style="color:var(--tx-60);font-size:18px;">Total Supply:</span>
+      </div>
+      <div class="total-big"><span class="fdrico lg" id="totalIco"><img src="land/penta-core-logo.png" alt="PTC" width="40" height="40" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></span><span class="n">10,000,000,000</span> <span class="pink" style="font-weight:600;">PTC</span></div>
+      <div class="tokenfee">
+        <div class="tf-l"><div class="tf-lbl">Token Fee:</div><div class="tf-val">5.0%</div></div>
+        <p>A 5% fee is applied to transactions and contributes to the platform revenue</p>
+      </div>
+    </div>
+    <div class="tok-ring">
+      <div class="ring" id="ring"></div>
+      <div class="pie-labels" id="pieLabels"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIERS ============ -->
+<section class="wrap sec-pad">
+  <h2 class="h-sec">Earn More as<br><span class="pink">You Hold More</span></h2>
+  <p class="sub" style="margin-top:24px;max-width:560px;">The more $PTC you hold, the higher your level and your share of rewards.</p>
+  <div class="tiers" id="tiers"></div>
+</section>
+
+<!-- ============ STEPS ============ -->
+<section class="wrap sec-pad" id="how">
+  <h2 class="h-sec"><span class="pink">Get Your $PTC</span> in Minutes</h2>
+  <p class="sub" style="margin-top:24px;">Takes less than 2 minutes. No experience needed.</p>
+  <div class="steps">
+    <div class="step">
+      <h4>1. Connect Wallet &amp; Top Up</h4>
+      <p>Use MetaMask, Trust Wallet, or any supported wallet. Top up from Binance, Bybit, or other exchanges.</p>
+      <div class="art" style="--art-mobile:url(/land/penta-core-logo.png);--art-desktop:url(/land/penta-core-logo.png);background-image:var(--art-desktop)"></div>
+    </div>
+    <div class="step">
+      <h4>2. Choose Network &amp; Enter Amount</h4>
+      <p>Select your network and enter the amount you want to buy.</p>
+      <div class="art" style="--art-mobile:url(/land/penta-core-logo.png);--art-desktop:url(/land/penta-core-logo.png);background-image:var(--art-desktop)"></div>
+    </div>
+    <div class="step">
+      <h4>3. Confirm &amp; Receive $PTC</h4>
+      <p>Approve the transaction and get your tokens instantly.</p>
+      <div class="art" style="--art-mobile:url(/land/penta-core-logo.png);--art-desktop:url(/land/penta-core-logo.png);background-image:var(--art-desktop)"></div>
+    </div>
+  </div>
+  <div class="step-cta">
+    <button class="btn lg" id="ctaBuy" data-i18n="cta.buyNow">Buy $PTC Now</button>
+    <button class="btn lg ghost" id="ctaGuide">View Full Guide</button>
+  </div>
+</section>
+
+<!-- ============ CREATORS ============ -->
+<section class="wrap sec-pad">
+  <h2 class="h-sec">Creators Are Talking<br><span class="pink">About $PTC</span></h2>
+  <p class="sub" style="margin-top:24px;max-width:560px;">Independent creators are already reviewing $PTC. Watch and decide for yourself.</p>
+  <div class="caro-head"><div class="caro-nav"><button class="caro-arrow" data-t="creators" data-d="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"></path></svg></button><button class="caro-arrow" data-t="creators" data-d="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg></button></div></div>
+  <div class="creators-row" id="creators"></div>
+</section>
+
+<!-- ============ GROWTH / PARTNERSHIPS ============ -->
+<section class="wrap sec-pad" style="padding-top:0;">
+  <div class="road-head">
+    <h2 class="h-sec" style="font-size:clamp(30px,4.5vw,44px);">Growth. Partnerships. Adoption.</h2>
+    <div class="caro-nav"><button class="caro-arrow" data-t="partners" data-d="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"></path></svg></button><button class="caro-arrow" data-t="partners" data-d="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg></button></div>
+  </div>
+  <div class="pcard-row" id="partners"></div>
+</section>
+
+<!-- ============ ROADMAP ============ -->
+<section class="wrap sec-pad" id="roadmap">
+  <div style="margin-bottom:48px;">
+    <h2 class="h-sec">Roadmap</h2>
+    <p class="sub" style="margin-top:24px;max-width:560px;">We value our community and always transparent of what happens in Penta Core.</p>
+  </div>
+  <div class="road-timeline">
+    <div class="road-years" id="roadYears"></div>
+    <div class="road-grid" id="roadGrid"></div>
+  </div>
+</section>
+
+<!-- ============ INFRASTRUCTURE ============ -->
+<section class="wrap sec-pad">
+  <h2 class="h-sec" style="text-align:center;">Advanced <span class="pink">Infrastructure</span></h2>
+  <div class="infra-box"><div class="infra-grid" id="infra"></div></div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="wrap sec-pad">
+  <h2 class="h-sec" style="text-align:center;">Know Before <span class="pink" data-gradient="You Decide">You Decide</span></h2>
+  <div class="faq" id="faq"></div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="wrap sec-pad final-sec">
+  <div class="final">
+    <div class="final-coin" style="background-image:url(land/penta-core-logo.png)"></div>
+    <div class="final-text">
+      <div class="hero-chips" id="ctaChips"></div>
+      <h2><span class="w">Enter Now.</span><br><span class="p">Scale Later.</span></h2>
+      <p class="sub">Enter early to lock in better conditions.<br>Secure your tier now or build your position over time at a lower average entry.</p>
+      <button class="btn lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M14.5 9a2.5 2.5 0 0 0-2.5-1.5c-1.4 0-2.5.7-2.5 1.8 0 2.7 5 1.3 5 4 0 1.1-1.1 1.9-2.5 1.9A2.6 2.6 0 0 1 9.4 13.6M12 6.2v1.3M12 16.5v1.3"></path></svg>Get $PTC Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="foot-watermark">penta core.</div>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html">
+          <img class="mark" src="land/penta-core-logo.png" alt="Penta Core" style="width:32px;height:32px;object-fit:cover;border-radius:50%;display:block;">
+          <span class="word">Penta Core.</span>
+        </a>
+        <p>$PTC is the core token of the Penta Core ecosystem.<br>It connects platform usage, fees and rewards.</p>
+        <h5 style="margin-top:8px;">Community</h5>
+        <div class="foot-socials">
+          <a href="index.html" data-social="x" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2.5h3.3l-7.2 8.2L23.6 22h-6.6l-5.2-6.8L5.9 22H2.6l7.7-8.8L2 2.5h6.8l4.7 6.2 5.4-6.2Zm-1.2 17.5h1.8L7.3 4.4H5.4L17.7 20Z"></path></svg></a>
+          <a href="index.html" data-social="telegram" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.6 20c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.3-.1-.5-.6-.2L6 13.5l-4.8-1.5c-1-.3-1-1 .2-1.5l18.7-7.2c.9-.3 1.6.2 1.3 1Z"></path></svg></a>
+          <a href="index.html" data-social="discord" target="_blank" rel="noopener" aria-label="Discord"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 5.3A16 16 0 0 0 15.5 4l-.3.5c1.4.3 2 .7 2.8 1.2A12 12 0 0 0 6 5.7c.7-.5 1.4-.9 2.8-1.2L8.5 4a16 16 0 0 0-4 1.3C2 9 1.4 12.6 1.7 16.2A16 16 0 0 0 6.5 18l.6-1c-.6-.2-1.2-.5-1.7-.9l.4-.3a11.4 11.4 0 0 0 9.8 0l.4.3c-.5.4-1.1.7-1.7.9l.6 1a16 16 0 0 0 4.8-1.8c.4-4.2-.6-7.8-3.2-10.9ZM8.3 14c-.8 0-1.4-.7-1.4-1.6 0-.9.6-1.6 1.4-1.6.8 0 1.4.7 1.4 1.6 0 .9-.6 1.6-1.4 1.6Zm7.4 0c-.8 0-1.4-.7-1.4-1.6 0-.9.6-1.6 1.4-1.6.8 0 1.4.7 1.4 1.6 0 .9-.6 1.6-1.4 1.6Z"></path></svg></a>
+          <a href="index.html" data-social="medium" target="_blank" rel="noopener" aria-label="Medium"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 7.5c0-.3-.1-.5-.3-.7L1 5.1V5h5.2l4 8.8L13.8 5H19v.1l-1.5 1.4c-.1.1-.2.3-.2.4v9.6c0 .2.1.3.2.4l1.5 1.4V18h-7.3v-.1l1.5-1.5c.2-.1.2-.2.2-.4V8.3l-4.2 9.6h-.6L3.9 8.3v6.4c0 .3.1.5.3.7l2 2.4V18H1v-.1l2-2.4c.2-.2.3-.4.2-.7V7.5Z"></path></svg></a>
+        </div>
+      </div>
+      <div class="foot-col"><h5>Links</h5><a href="docs/pentacore-whitepaper_pdf.html" target="_blank" rel="noopener" data-flink="whitepaper">Whitepaper</a><a href="docs/index.html" data-flink="docs">Docs</a><a href="blog/index.html" data-flink="blog">Blog</a></div>
+      <div class="foot-col"><h5>Products</h5><a href="launchpad/index.html" data-flink="launchpad">Launchpad</a><a href="ai-bots/index.html" data-flink="aiBots">AI Bots</a><a href="ai-analyzer/index.html" data-flink="aiAnalyzer">AI Analyzer</a></div>
+      <div class="foot-col"><h5>PTC Token</h5><a href="index.html" data-flink="tokenomics">Tokenomics</a><a href="staking/index.html" data-flink="staking">Staking</a><a href="index.html" data-flink="roadmap">Roadmap</a></div>
+      <div class="foot-col"><h5>Presale</h5><a href="how-to-buy/index.html" data-flink="howToBuy">How to Buy</a><a href="wallet/index.html" data-flink="wallet">Don't have a wallet?</a><a href="https://t.me/pentacore_network" target="_blank" data-flink="support">Support</a></div>
+    </div>
+    <div class="foot-bottom">
+      <p class="disclaimer"><b style="color:rgba(255,255,255,0.7)">Disclaimer:</b> Cryptocurrency may be unregulated in your jurisdiction. The value of cryptocurrencies may fluctuate. Profits may be subject to capital gains or other taxes applicable in your jurisdiction.</p>
+      <div class="foot-legal">
+        <span><a href="terms/index.html" style="color:inherit;text-decoration:none">Terms and Legal</a> &nbsp;|&nbsp; <a href="privacy/index.html" style="color:inherit;text-decoration:none">Privacy &amp; Cookie Policy</a> &nbsp;|&nbsp; <a href="risks/index.html" style="color:inherit;text-decoration:none">Risk Disclosure</a></span>
+        <span>Copyright 2025 PTC Network</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+</div>
+<script>// Runs inline before the application modules download. Cached numbers are only
+// a visual preview: the form remains disabled until fresh settings arrive.
+(()=>{
+  let draft=null;
+  try {
+    const d=JSON.parse(localStorage.getItem('fundera_payment_draft_v1')||'null');
+    const codes=['BTC','ETH','BSC','BASE','TRON','SOL'];
+    const allowed={BTC:['BTC'],ETH:['ETH','USDT','USDC'],BSC:['BNB','USDT','USDC'],BASE:['ETH','USDT','USDC'],SOL:['SOL','USDT','USDC'],TRON:['TRX','USDT']};
+    if(d&&allowed[d.net]?.includes(d.currency)&&['pay','recv'].includes(d.lastEdited)&&typeof d.amount==='string'&&/^\d*(?:\.\d*)?$/.test(d.amount)&&d.amount.length<=40){
+      draft=d;
+      document.querySelectorAll('#bcNets .bc-netbtn').forEach((el,i)=>el.classList.toggle('sel',codes[i]===d.net));
+      const row=document.querySelector('.bc-io');
+      const icons={"TRX":"<svg viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"12\" fill=\"#ef0027\"/><path d=\"m5 5 14 3-8 12L5 5Zm0 0 6 6 8-3M11 11v9\" fill=\"none\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\"/></svg>","TRON":"<svg viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"12\" fill=\"#ef0027\"/><path d=\"m5 5 14 3-8 12L5 5Zm0 0 6 6 8-3M11 11v9\" fill=\"none\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\"/></svg>","BTC":"<svg viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"12\" fill=\"#F7931A\"/><path d=\"M16.2 10.6c.2-1.4-.85-2.1-2.3-2.6l.47-1.9-1.15-.28-.46 1.85c-.3-.08-.62-.15-.93-.22l.46-1.86-1.15-.28-.47 1.9c-.25-.06-.5-.11-.74-.17l-1.6-.4-.3 1.23s.86.2.84.21c.47.12.55.43.54.68l-1.3 5.23c-.06.15-.21.36-.53.28.01.02-.85-.21-.85-.21l-.57 1.32 1.5.38c.28.07.55.15.82.21l-.48 1.92 1.15.28.47-1.9c.31.09.62.16.92.24l-.47 1.89 1.15.28.48-1.92c1.96.37 3.44.22 4.06-1.55.5-1.43-.02-2.25-1.06-2.79.76-.17 1.33-.67 1.48-1.7Zm-2.65 3.7c-.36 1.43-2.76.66-3.54.46l.63-2.53c.78.2 3.28.58 2.91 2.07Zm.36-3.72c-.32 1.3-2.32.64-2.97.48l.57-2.3c.65.16 2.74.46 2.4 1.82Z\" fill=\"#fff\"/></svg>","ETH":"<svg viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"12\" fill=\"#627EEA\"/><path d=\"M12.13 3v6.65l5.62 2.51L12.13 3Z\" fill=\"#fff\" fill-opacity=\".6\"/><path d=\"M12.13 3 6.5 12.16l5.63-2.51V3Z\" fill=\"#fff\"/><path d=\"M12.13 16.48v4.52l5.63-7.78-5.63 3.26Z\" fill=\"#fff\" fill-opacity=\".6\"/><path d=\"M12.13 21v-4.52L6.5 13.22 12.13 21Z\" fill=\"#fff\"/><path d=\"m12.13 15.43 5.62-3.27-5.62-2.5v5.77Z\" fill=\"#fff\" fill-opacity=\".2\"/><path d=\"M6.5 12.16l5.63 3.27V9.66L6.5 12.16Z\" fill=\"#fff\" fill-opacity=\".6\"/></svg>","BNB":"<svg viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"12\" fill=\"#F3BA2F\"/><path d=\"M8.7 10.7 12 7.4l3.31 3.31 1.92-1.92L12 3.57 6.78 8.79 8.7 10.7ZM3.57 12l1.92-1.92L7.4 12l-1.92 1.92L3.57 12Zm5.13 1.3L12 16.6l3.3-3.3 1.93 1.9L12 20.43l-5.22-5.21 1.93-1.91ZM16.6 12l1.92-1.92L20.43 12l-1.92 1.92L16.6 12Zm-2.66-.01L12 10.04 10.55 11.49l-.51.52L12 13.96 13.94 12Z\" fill=\"#fff\"/></svg>","USDT":"<svg viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"12\" fill=\"#26A17B\"/><path d=\"M13.4 10.5v-1.4h3.2V7H7.4v2.1h3.2v1.4c-2.6.12-4.56.64-4.56 1.26 0 .62 1.96 1.14 4.56 1.26v4.48h2.8v-4.48c2.6-.12 4.55-.64 4.55-1.26 0-.62-1.95-1.14-4.55-1.26Zm0 2.13c-.07 0-.42.03-1.38.03-.77 0-1.31-.02-1.5-.03-2.96-.13-5.17-.65-5.17-1.27 0-.62 2.21-1.13 5.17-1.26v2.03c.2.01.76.04 1.51.04.92 0 1.3-.03 1.37-.04v-2.03c2.95.13 5.16.64 5.16 1.26 0 .62-2.21 1.13-5.16 1.27Z\" fill=\"#fff\"/></svg>","USDC":"<svg viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"12\" fill=\"#2775CA\"/><path d=\"M15.1 13.9c0-1.55-.95-2.1-2.85-2.34-1.36-.18-1.63-.55-1.63-1.18 0-.63.45-1.04 1.35-1.04.81 0 1.26.27 1.48.95.05.13.18.22.31.22h.73c.18 0 .31-.13.31-.31v-.04a2.2 2.2 0 0 0-2-1.8V7.4c0-.18-.13-.31-.36-.36h-.68c-.18 0-.31.13-.36.36v1.07c-1.36.18-2.22 1.09-2.22 2.27 0 1.46.9 2.04 2.8 2.27 1.27.23 1.67.5 1.67 1.22 0 .72-.63 1.22-1.49 1.22-1.17 0-1.58-.5-1.71-1.18-.05-.18-.18-.27-.31-.27h-.77c-.18 0-.31.13-.31.31v.04c.18 1.13 .9 1.95 2.4 2.18v1.08c0 .18.13.31.36.36h.68c.18 0 .31-.13.36-.36v-1.08c1.36-.23 2.27-1.18 2.27-2.49Z\" fill=\"#fff\"/><path d=\"M9.55 18.4a6.55 6.55 0 0 1 0-12.8c.22-.09.36-.27.36-.5v-.5c0-.18-.14-.31-.36-.31-.04 0-.13 0-.18.04a7.65 7.65 0 0 0 0 14.6c.05.05.14.05.18.05.18 0 .36-.14.36-.36v-.5c0-.18-.14-.27-.36-.32Zm5.08-13.3c-.05-.05-.14-.05-.18-.05-.18 0-.36.14-.36.36v.5c0 .18.13.32.36.36a6.55 6.55 0 0 1 0 12.8c-.23.09-.36.27-.36.5v.5c0 .18.13.32.36.32.04 0 .13 0 .18-.05a7.65 7.65 0 0 0 0-14.64Z\" fill=\"#fff\"/></svg>","SOL":"<svg viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"12\" fill=\"#000\"/><defs><linearGradient id=\"solg\" x1=\"6\" y1=\"17\" x2=\"18\" y2=\"7\" gradientUnits=\"userSpaceOnUse\"><stop stop-color=\"#9945FF\"/><stop offset=\"1\" stop-color=\"#14F195\"/></linearGradient></defs><g fill=\"url(#solg)\"><path d=\"M7.3 15.5a.5.5 0 0 1 .36-.15h9.1c.27 0 .4.32.22.5l-1.6 1.6a.5.5 0 0 1-.36.15h-9.1c-.27 0-.4-.32-.21-.5l1.6-1.6Z\"/><path d=\"M7.3 6.5a.5.5 0 0 1 .36-.15h9.1c.27 0 .4.32.22.5l-1.6 1.6a.5.5 0 0 1-.36.16h-9.1c-.27 0-.4-.33-.21-.51l1.6-1.6Z\"/><path d=\"M15.34 11a.5.5 0 0 0-.36-.15h-9.1c-.27 0-.4.32-.22.5l1.6 1.6a.5.5 0 0 0 .37.16h9.09c.27 0 .4-.33.22-.51l-1.6-1.6Z\"/></g></svg>","FDR":"<img src=\"/land/penta-core-logo.png\" alt=\"PTC\" style=\"width:100%;height:100%;object-fit:cover;border-radius:50%;\" />","PTC":"<img src=\"/land/penta-core-logo.png\" alt=\"PTC\" style=\"width:100%;height:100%;object-fit:cover;border-radius:50%;\" />","BASE":"<svg viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"12\" fill=\"#0052FF\"/><path d=\"M11.96 20a8 8 0 1 0-7.94-9.02h10.5v2.06H4.02A8 8 0 0 0 11.96 20Z\" fill=\"#fff\"/></svg>","ARB":"<svg viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"12\" fill=\"#213147\"/><g transform=\"translate(1.33,-1.87) scale(0.0092)\"><path fill=\"#12AAFF\" d=\"M1435,1440l-121,332c-3,9-3,19,0,29l208,571l241-139l-289-793C1467,1422,1442,1422,1435,1440z\"/><path fill=\"#12AAFF\" d=\"M1678,882c-7-18-32-18-39,0l-121,332c-3,9-3,19,0,29l341,935l241-139L1678,883V882z\"/><polygon fill=\"#213147\" points=\"642,2179 727,1947 897,2088 738,2234\"/><path fill=\"#fff\" d=\"M1172,644H939c-17,0-33,11-39,27L401,2039l241,139l550-1507c5-14-5-28-19-28L1172,644z\"/><path fill=\"#fff\" d=\"M1580,644h-233c-17,0-33,11-39,27L738,2233l241,139l620-1701c5-14-5-28-19-28V644z\"/></g></svg>"};
+      row.querySelector('.bc-coin').innerHTML=icons[d.currency];
+      const cur=row.querySelector('.bc-cur');
+      const arrow=cur.querySelector('svg')?.outerHTML||'';
+      cur.innerHTML=d.currency+(d.net==='BTC'?'':' '+arrow);
+      row.querySelector('.bc-cursub').textContent=({BTC:'Bitcoin',ETH:'Ethereum',BNB:'Binance',SOL:'Solana',TRX:'TRON',USDT:'Tether',USDC:'USD Coin'})[d.currency];
+      const input=document.querySelectorAll('.bc-amt')[d.lastEdited==='pay'?0:1];
+      input.value=d.amount;input.classList.remove('economics-skeleton');
+    }
+  }catch{}
+  try {
+    const data=JSON.parse(sessionStorage.getItem('fundera_landing_display_v1')||'null');
+    if(!data||data.lang!==document.documentElement.lang||data.time>Date.now()||Date.now()-data.time>600000)return;
+    for(const id of ['bcRaised','bcPrice','bcPrice2','bcNext','bcLast','bcProgPct','bcCap']){
+      const node=document.getElementById(id),value=data.text?.[id];
+      if(node&&typeof value==='string'&&value.length<100){node.textContent=value;node.classList.remove('economics-skeleton');}
+    }
+    if(!draft)document.querySelectorAll('.bc-amt').forEach((node,index)=>{
+      const value=data.inputs?.[index];
+      if(typeof value==='string'&&/^[\d.,]*$/.test(value)&&value.length<40){node.value=value;node.classList.remove('economics-skeleton');}
+    });
+    const paySub=document.querySelector('.bc-io .bc-amtsub');
+    if(!draft&&paySub&&typeof data.paySub==='string'&&data.paySub.length<100)paySub.textContent=data.paySub;
+    document.querySelectorAll('.bc-amtsub').forEach(node=>node.classList.remove('economics-skeleton'));
+    const progress=document.querySelector('.bc-progbar>span');
+    if(progress&&/^\d+(?:\.\d+)?%$/.test(data.progress||'')){progress.style.width=data.progress;progress.dataset.fillAnimated='true';progress.classList.remove('economics-skeleton');}
+    for(const selector of ['.bc-timer','.bc-codebtns','[data-code-field="referral"]','[data-code-field="bonus"]']){
+      const node=document.querySelector(selector);
+      if(node&&typeof data.hidden?.[selector]==='boolean')node.hidden=data.hidden[selector];
+      if(node)node.removeAttribute('data-settings-loading');
+    }
+    const timer=document.querySelector('.bc-timer');
+    if(timer){
+      let seconds=Math.max(0,Math.floor((Number(data.timerEnd)-Date.now())/1000));
+      const parts=[Math.floor(seconds/86400),Math.floor(seconds%86400/3600),Math.floor(seconds%3600/60),seconds%60];
+      timer.querySelectorAll('b').forEach((node,index)=>node.textContent=data.timerEnd?String(parts[index]).padStart(2,'0'):'--');
+      timer.classList.remove('timer-skeleton');
+    }
+    document.documentElement.dataset.landingPreview='true';
+  }catch{}
+})();
+</script>
+
+</body>

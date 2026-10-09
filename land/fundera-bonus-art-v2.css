@@ -1,0 +1,9 @@
+/* Approved bonus illustrations: compact desktop art behind the cards. */
+.bz-widget.bz-purchase-art{left:625px;top:0;width:250px;height:200px;z-index:2;transform:none;pointer-events:none;}
+.bz-phone.bz-swap-art{left:910px;top:195px;width:250px;height:250px;z-index:2;transform:none;pointer-events:none;}
+#bonusMobile .bzm-source-art-chart{background-image:url("fundera-purchase-ui-960.webp")!important;right:12px;top:10px;width:156px;height:124.8px;z-index:0;pointer-events:none;filter:drop-shadow(0 10px 18px rgba(253,0,244,.16));}
+#bonusMobile .bzm-source-art-phone{background-image:url("fundera-terminal-reversed-final-960.webp")!important;right:12px;top:10px;width:129.6px;height:129.6px;z-index:0;pointer-events:none;filter:drop-shadow(0 10px 18px rgba(253,0,244,.16));}
+@media(max-width:720px) and (max-resolution:1.99dppx){
+ #bonusMobile .bzm-source-art-chart{background-image:url("fundera-purchase-ui-480.webp")!important;}
+ #bonusMobile .bzm-source-art-phone{background-image:url("fundera-terminal-reversed-final-480.webp")!important;}
+}
