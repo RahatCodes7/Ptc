@@ -250,7 +250,19 @@ document.addEventListener('DOMContentLoaded',()=>{
     </div>
   </div>
 </div>
-
+<script>// Fallback hamburger toggle: runs even if the main module fails (e.g. file:// CORS block).
+// Stays dormant when header-controls module owns the menu (it prepends .nav-ind + sets data-navigation-ready).
+(()=>{const t=document.getElementById('mobToggle'),m=document.getElementById('mobMenu');if(!t||!m)return;
+const H='<path d="M4 6h16M4 12h16M4 18h16"/>',X='<path d="M18 6 6 18M6 6l12 12"/>';
+const owned=()=>{try{const p=document.querySelector('.navlinks');if(p&&p.dataset.navigationReady)return true;return !!document.querySelector('.nav-ind');}catch{return false;}};
+const place=()=>{try{const n=document.querySelector('.nav').getBoundingClientRect().bottom+8;const h=Math.max(0,innerHeight-n-12);m.style.setProperty('--mobile-menu-top',n+'px');m.style.setProperty('--mobile-menu-height',h+'px');}catch{}};
+const set=o=>{place();m.classList.toggle('open',o);try{m.inert=!o;}catch{}m.setAttribute('aria-hidden',String(!o));t.setAttribute('aria-expanded',String(o));const s=t.querySelector('svg');if(s)s.innerHTML=o?X:H;};
+t.addEventListener('click',e=>{if(owned())return;e.stopPropagation();set(!m.classList.contains('open'));});
+m.querySelectorAll('.mob-links a').forEach(a=>a.addEventListener('click',()=>{if(!owned())set(false);}));
+document.addEventListener('click',e=>{if(!owned()&&m.classList.contains('open')&&!m.contains(e.target)&&!t.contains(e.target))set(false);});
+document.addEventListener('keydown',e=>{if(!owned()&&e.key==='Escape'&&m.classList.contains('open')){set(false);t.focus();}});
+addEventListener('resize',()=>{if(!owned()&&m.classList.contains('open'))place();});})();
+</script>
 
 <!-- ============ HERO ============ -->
 <section class="hero wrap hero-logo-preview" id="top">
