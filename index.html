@@ -151,8 +151,8 @@ document.addEventListener('DOMContentLoaded',()=>{
   <link rel="modulepreload" crossorigin="" href="assets/i18n-rE1JQKOk.js">
   <link rel="modulepreload" crossorigin="" href="assets/transaction-ticker-b2c1b993.js">
   <link rel="modulepreload" crossorigin="" href="assets/header-controls-f07d1d71.js">
-  <link rel="modulepreload" crossorigin="" href="https://fundera.io/assets/payment-icons-CCjC9Tmd.js">
-  <link rel="modulepreload" crossorigin="" href="https://fundera.io/assets/fxplus-ccca938d.js">
+  <link rel="modulepreload" crossorigin="" href="assets/payment-icons-CCjC9Tmd.js">
+  <link rel="modulepreload" crossorigin="" href="assets/fxplus-ccca938d.js">
   <link rel="modulepreload" crossorigin="" href="assets/ui-U1rpOh0k.js">
   <link rel="stylesheet" href="assets/header-controls-DDz9dF5C.css">
   <link rel="stylesheet" href="assets/transaction-ticker-Duhs3A--.css">
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     <span class="word">Penta Core.</span>
   </a>
   <div class="navlinks">
-    <a href="index.html" class="active" data-i18n="nav.main">Main</a><a href="index.html" data-i18n="nav.tokenomics">Tokenomics</a><a href="index.html" data-i18n="nav.howToBuy">How to buy</a><a href="index.html" data-i18n="nav.roadmap">Roadmap</a><a href="docs/pentacore-whitepaper_pdf.html" target="_blank" rel="noopener" data-flink="whitepaper">Whitepaper</a><a href="docs/index.html" data-i18n="nav.docs" data-flink="docs">Docs</a>
+    <a href="#top" class="active" data-i18n="nav.main">Main</a><a href="#tokenomics" data-i18n="nav.tokenomics">Tokenomics</a><a href="how-to-buy/index.html" data-i18n="nav.howToBuy">How to buy</a><a href="#roadmap" data-i18n="nav.roadmap">Roadmap</a><a href="docs/pentacore-whitepaper_pdf.html" target="_blank" rel="noopener" data-flink="whitepaper">Whitepaper</a><a href="docs/index.html" data-i18n="nav.docs" data-flink="docs">Docs</a>
   </div>
   <div class="navright">
     <button class="pill" id="socialBtn"><span data-i18n="nav.social">Social</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></button>
@@ -221,10 +221,10 @@ document.addEventListener('DOMContentLoaded',()=>{
 <!-- ============ MOBILE MENU ============ -->
 <div class="mob-menu" id="mobMenu">
   <div class="mob-links">
-    <a href="index.html" class="active" data-i18n="nav.main">Main<span class="dot"></span></a>
-    <a href="index.html" data-i18n="nav.tokenomics">Tokenomics</a>
+    <a href="#top" class="active" data-i18n="nav.main">Main<span class="dot"></span></a>
+    <a href="#tokenomics" data-i18n="nav.tokenomics">Tokenomics</a>
     <a href="how-to-buy/index.html" data-i18n="nav.howToBuy">How to buy</a>
-    <a href="index.html" data-i18n="nav.roadmap">Roadmap</a>
+    <a href="#roadmap" data-i18n="nav.roadmap">Roadmap</a>
     <a href="docs/pentacore-whitepaper_pdf.html" target="_blank" rel="noopener" data-flink="whitepaper">Whitepaper</a>
     <a href="docs/index.html" data-i18n="nav.docs" data-flink="docs">Docs</a>
   </div>
@@ -553,15 +553,15 @@ document.addEventListener('DOMContentLoaded',()=>{
         <p>$PTC is the core token of the Penta Core ecosystem.<br>It connects platform usage, fees and rewards.</p>
         <h5 style="margin-top:8px;">Community</h5>
         <div class="foot-socials">
-          <a href="index.html" data-social="x" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2.5h3.3l-7.2 8.2L23.6 22h-6.6l-5.2-6.8L5.9 22H2.6l7.7-8.8L2 2.5h6.8l4.7 6.2 5.4-6.2Zm-1.2 17.5h1.8L7.3 4.4H5.4L17.7 20Z"></path></svg></a>
-          <a href="index.html" data-social="telegram" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.6 20c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.3-.1-.5-.6-.2L6 13.5l-4.8-1.5c-1-.3-1-1 .2-1.5l18.7-7.2c.9-.3 1.6.2 1.3 1Z"></path></svg></a>
+          <a href="https://x.com/PentaCore_io" data-social="x" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2.5h3.3l-7.2 8.2L23.6 22h-6.6l-5.2-6.8L5.9 22H2.6l7.7-8.8L2 2.5h6.8l4.7 6.2 5.4-6.2Zm-1.2 17.5h1.8L7.3 4.4H5.4L17.7 20Z"></path></svg></a>
+          <a href="https://t.me/pentacore_network" data-social="telegram" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.6 20c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.3-.1-.5-.6-.2L6 13.5l-4.8-1.5c-1-.3-1-1 .2-1.5l18.7-7.2c.9-.3 1.6.2 1.3 1Z"></path></svg></a>
           <a href="index.html" data-social="discord" target="_blank" rel="noopener" aria-label="Discord"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 5.3A16 16 0 0 0 15.5 4l-.3.5c1.4.3 2 .7 2.8 1.2A12 12 0 0 0 6 5.7c.7-.5 1.4-.9 2.8-1.2L8.5 4a16 16 0 0 0-4 1.3C2 9 1.4 12.6 1.7 16.2A16 16 0 0 0 6.5 18l.6-1c-.6-.2-1.2-.5-1.7-.9l.4-.3a11.4 11.4 0 0 0 9.8 0l.4.3c-.5.4-1.1.7-1.7.9l.6 1a16 16 0 0 0 4.8-1.8c.4-4.2-.6-7.8-3.2-10.9ZM8.3 14c-.8 0-1.4-.7-1.4-1.6 0-.9.6-1.6 1.4-1.6.8 0 1.4.7 1.4 1.6 0 .9-.6 1.6-1.4 1.6Zm7.4 0c-.8 0-1.4-.7-1.4-1.6 0-.9.6-1.6 1.4-1.6.8 0 1.4.7 1.4 1.6 0 .9-.6 1.6-1.4 1.6Z"></path></svg></a>
           <a href="index.html" data-social="medium" target="_blank" rel="noopener" aria-label="Medium"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 7.5c0-.3-.1-.5-.3-.7L1 5.1V5h5.2l4 8.8L13.8 5H19v.1l-1.5 1.4c-.1.1-.2.3-.2.4v9.6c0 .2.1.3.2.4l1.5 1.4V18h-7.3v-.1l1.5-1.5c.2-.1.2-.2.2-.4V8.3l-4.2 9.6h-.6L3.9 8.3v6.4c0 .3.1.5.3.7l2 2.4V18H1v-.1l2-2.4c.2-.2.3-.4.2-.7V7.5Z"></path></svg></a>
         </div>
       </div>
       <div class="foot-col"><h5>Links</h5><a href="docs/pentacore-whitepaper_pdf.html" target="_blank" rel="noopener" data-flink="whitepaper">Whitepaper</a><a href="docs/index.html" data-flink="docs">Docs</a><a href="blog/index.html" data-flink="blog">Blog</a></div>
       <div class="foot-col"><h5>Products</h5><a href="launchpad/index.html" data-flink="launchpad">Launchpad</a><a href="ai-bots/index.html" data-flink="aiBots">AI Bots</a><a href="ai-analyzer/index.html" data-flink="aiAnalyzer">AI Analyzer</a></div>
-      <div class="foot-col"><h5>PTC Token</h5><a href="index.html" data-flink="tokenomics">Tokenomics</a><a href="staking/index.html" data-flink="staking">Staking</a><a href="index.html" data-flink="roadmap">Roadmap</a></div>
+      <div class="foot-col"><h5>PTC Token</h5><a href="#tokenomics" data-flink="tokenomics">Tokenomics</a><a href="staking/index.html" data-flink="staking">Staking</a><a href="#roadmap" data-flink="roadmap">Roadmap</a></div>
       <div class="foot-col"><h5>Presale</h5><a href="how-to-buy/index.html" data-flink="howToBuy">How to Buy</a><a href="wallet/index.html" data-flink="wallet">Don't have a wallet?</a><a href="https://t.me/pentacore_network" target="_blank" data-flink="support">Support</a></div>
     </div>
     <div class="foot-bottom">
